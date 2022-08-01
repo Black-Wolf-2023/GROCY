@@ -1,0 +1,93 @@
+@use "./main" as *;
+#ads {
+  .ads_parent {
+    width: 83%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+    .cont {
+      position: relative;
+      padding: 40px;
+      .img {
+        img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        .ads_img_1 {
+          width: 140px;
+          right: 10px;
+        }
+        .ads_img_2 {
+          width: 200px;
+        }
+      }
+      .detials {
+        @include flex(column, space-evenly, flex-start, fls, 0);
+        gap: 20px;
+        height: 100%;
+        span {
+          background-color: $yellowColor;
+          padding: 5px;
+          border-radius: 2px;
+          color: $whiteColor;
+          font-weight: 600;
+          font-size: $primaryFont / 1.5;
+        }
+        h2 {
+          color: $darkColor;
+        }
+        h4 {
+          color: $grayColor;
+          font-weight: 600;
+        }
+        button {
+          background-color: $mainColor;
+          color: $whiteColor;
+          @include flex(row, center, center, fls, 0);
+          padding: 10px 20px;
+          gap: 5px;
+          &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    > :nth-child(1) {
+      background-image: url("../../images/main/ads-1.png");
+    }
+    > :nth-child(2) {
+      background-image: url("../../images/main/ads-2.png");
+      .detials {
+        span {
+          background-color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+@include media(md) {
+  #ads {
+    .ads_parent {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@include media(sm) {
+  #ads {
+    .ads_parent {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      .img {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

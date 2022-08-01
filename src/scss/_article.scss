@@ -1,0 +1,55 @@
+@use "./main" as *;
+
+article {
+  margin: 0 100px;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  .copy_right {
+    color: $darkColor;
+    font-weight: 600;
+    span {
+      color: $mainColor;
+    }
+  }
+  .social {
+    @include flex(row, center, center, fls, 0);
+    gap: 20px;
+    a {
+      background-color: $mainColor;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+      @include flex(row, center, center, fls, 0);
+      img {
+        width: 20px;
+      }
+      &:hover {
+        background-color: $darkColor;
+      }
+    }
+  }
+}
+
+@include media(md) {
+  article {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    .social {
+      justify-content: flex-start;
+    }
+  }
+}
+@include media(sm) {
+  article {
+    margin: 0 50px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    .social {
+      justify-content: flex-start;
+    }
+  }
+}

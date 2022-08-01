@@ -1,0 +1,81 @@
+@use "./main" as *;
+
+#product_4 {
+  .products_4 {
+    width: 100%;
+    .conts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      gap: 100px;
+
+      .cont {
+        h3 {
+          color: $darkColor;
+          padding: 20px 0;
+          position: relative;
+          &::after {
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            height: 3px;
+            background-color: $mainColor;
+            position: absolute;
+          }
+        }
+        .product {
+          @include flex(row, flex-start, flex-start, fls, 0px);
+          margin: 20px 0;
+          gap: 10px;
+          > .img {
+            background-color: $lightWhiteColor;
+            padding: 10px;
+            img {
+              width: 76px;
+            }
+          }
+          .rate {
+            h5 {
+              color: $darkColor;
+              margin-bottom: 5px;
+            }
+            .starts {
+              margin-bottom: 20px;
+            }
+            span {
+              color: $mainColor;
+              font-weight: 700;
+            }
+            > :last-child {
+              color: $grayColor;
+              font-weight: 500;
+              font-size: $primaryFont / 1.6;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media(md) {
+  #product_4 {
+    .products_4 {
+      .conts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+    }
+  }
+}
+@include media(sm) {
+  #product_4 {
+    .products_4 {
+      .conts {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+      }
+    }
+  }
+}

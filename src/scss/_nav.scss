@@ -1,0 +1,97 @@
+@use "./main" as *;
+//================ Nav || Main || Styles ========================>
+nav {
+  @include flex(row, space-between, center, fls, 30px);
+  z-index: 1000;
+  & span,
+  img,
+  a {
+    cursor: pointer;
+  }
+  .collection {
+    @include flex(row, space-between, center, fls, 0px);
+    background-color: $mainColor;
+    padding: 10px;
+    color: $whiteColor;
+    border-radius: 2px;
+    img {
+      margin-right: 10px;
+    }
+  }
+  ul {
+    @include flex(row, space-between, center, fls, 0px);
+    & li:first-child a {
+      color: $mainColor;
+    }
+    li {
+      a {
+        @include flex(row, space-between, center, fls, 0px);
+        margin: 20px;
+        &:hover {
+          color: $mainColor;
+        }
+        color: $darkColor;
+        font-weight: 500;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .phone {
+    @include flex(row, space-between, center, fls, 0px);
+    & span,
+    img {
+      margin-left: 10px;
+      font-weight: 500;
+    }
+    & span:last-child {
+      color: $darkColor;
+      font-size: $mainFont/1.7;
+    }
+    & span:first-of-type {
+      color: $mainColor;
+    }
+  }
+}
+//================ Nav || Main || Styles ========================>
+@include media(smmd) {
+  nav {
+    @include flex(column, space-between, center, fls, 0px);
+    left: -100%;
+    position: fixed;
+    background-color: $primaryColor;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: rotate(-60deg);
+    > ul {
+      width: 100%;
+      @include flex(column, space-between, flex-start, fls, 0px);
+      li {
+        width: 100%;
+        a {
+          @include flex(row, flex-start, flex-start, fls, 0px);
+          img {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+    .collection {
+      width: 100%;
+      @include flex(row, flex-start, center, fls, 0px);
+      padding: 20px;
+    }
+    .phone {
+      padding: 20px;
+    }
+  }
+}
+@include media(sm) {
+  nav {
+    top: 340px;
+    width: 100%;
+    transition-delay: 0.9s;
+  }
+}

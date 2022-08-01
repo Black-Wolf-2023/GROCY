@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+//=============== Constance || Start ================>
+$mainColor: #3bb77e;
+$darkMianColor: #3bb77e;
+$primaryColor: #def9ec;
+$darkColor: #253d4e;
+$lightColor: #f35244;
+$purperColor: rgba(156, 138, 207, 0.589);
+$grayColor: #838383;
+$lightGrayColor: #e7e7e7e7;
+$whiteColor: #fff;
+$lightWhiteColor: #f2f3f4;
+$lightYellowColor: #fff7e6;
+$yellowColor: #ffd480;
+$fontFam: "Quicksand", sans-serif;
+$mainFont: 1.5rem;
+$primaryFont: 1.2rem;
+$smallFont: 1rem;
+$listColor: (
+  "light-1": $primaryColor,
+  "light-2": $lightYellowColor,
+  "light-3":
+    rgba(
+      $color: $lightColor,
+      $alpha: 0.5,
+    ),
+  "light-4": $purperColor,
+);
+//=============== Constance || End ================>
+//=============== Mixin || Start ================>
+@mixin flex($dir, $js, $al, $wp, $p) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $js;
+  align-items: $al;
+  padding: 0 $p;
+}
+@mixin raduse($w, $h, $r) {
+  width: $w;
+  height: $h;
+  border-radius: $r;
+}
+@mixin cont($w, $m) {
+  width: $w;
+  margin: $m;
+}
+@mixin media($size) {
+  @if $size == md {
+    @media screen and (min-width: 767px) and (max-width: 1067px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media screen and (min-width: 300px) and (max-width: 766px) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: 300px) and (max-width: 1067px) {
+      @content;
+    }
+  }
+}
+//=============== Mixin || End ================>
+
+//=============== Classes || Start ================>
+* > *,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  font-family: $fontFam;
+  -webkit-user-drag: none;
+}
+body {
+  height: 100vh;
+}
+.active {
+  left: 0;
+  opacity: 1;
+  transform: rotate(0);
+}
+.box {
+  @include flex(column, flex-start, flex-start, fls, 0);
+  padding: 40px 30px;
+}
+@include media(sm) {
+  .box {
+    padding: 60px 30px;
+  }
+}
+//=============== Classes || End ================>
+
+//=============== Include || Start ================>
+
+@include media(sm) {
+  .active-sm {
+    left: 0 !important;
+    transform: rotate(0) !important;
+  }
+}
+.toggle {
+  z-index: 100;
+}
+.active-header {
+  position: fixed;
+  width: 100%;
+  @include media(sm) {
+    width: 100%;
+  }
+}
+.slideOption {
+  height: 220px !important;
+  padding-top: 30px !important;
+  li {
+    a {
+      opacity: 1 !important;
+      pointer-events: all !important;
+    }
+  }
+}
+@include media(sm) {
+  .active-md {
+    opacity: 1 !important;
+  }
+}
+@include media(md) {
+  .active-md {
+    bottom: -85% !important;
+    opacity: 1 !important;
+  }
+}
+@each $name, $color in $listColor {
+  .#{$name} {
+    background-color: $color;
+  }
+}
+//=============== Include || End ================>
+
+//=============== Options || Start ================>
+
+.options {
+  width: 100%;
+  @include flex(row, space-between, center, fls, 0);
+  padding: 40px 30px;
+  h1 {
+    color: $darkColor;
+    font-size: $mainFont;
+  }
+  .slide-show {
+    display: none;
+  }
+  ul {
+    @include flex(row, flex-start, center, fls, 0px);
+    & li:first-child a {
+      color: $mainColor;
+    }
+    li {
+      a {
+        padding: 20px;
+        color: $darkColor;
+        font-weight: 600;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+@include media(md) {
+  .options {
+    h1 {
+      font-size: $mainFont/1.4;
+    }
+    .slide-show {
+      display: none;
+    }
+    ul {
+      li {
+        a {
+          font-size: $mainFont/1.7;
+        }
+      }
+    }
+  }
+}
+@include media(sm) {
+  .options {
+    background-color: $darkColor;
+    border-radius: 2px;
+    @include flex(column, flex-start, center, fls, 0px);
+    padding: 10px;
+    h1,
+    ul {
+      @include flex(column, flex-start, flex-start, fls, 0px);
+      color: $whiteColor;
+      height: 0;
+      padding: 20px;
+      transition: height 0.5s ease-in-out;
+      li {
+        margin: 10px 0;
+        a {
+          opacity: 0;
+          pointer-events: none;
+          padding: 10px 0;
+          color: $whiteColor;
+        }
+      }
+    }
+    .slide-show {
+      display: inline-block;
+    }
+    ul {
+      align-self: flex-start;
+    }
+    h1 {
+      position: relative;
+      width: 100%;
+      font-size: $primaryFont;
+      @include flex(row, flex-start, flex-start, fls, 0px);
+      span {
+        position: absolute;
+        right: 3%;
+        width: 15px;
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+//=============== Options || End ================>
+
+//=============== Right || Left || Btn || Start ================>
+.right,
+.left {
+  width: 50px;
+  border-radius: 50%;
+  background-color: $lightGrayColor;
+  @include flex(row, center, center, fls, 0px);
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $mainColor;
+  }
+}
+.right {
+  transform: rotate(180deg);
+}
+//=============== Right || Left || Btn || End ================>
+
+//=============== Card || Start ================>
+.card {
+  border: 1px solid $lightGrayColor;
+  padding: 15px;
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+  .details {
+    > span {
+      color: $grayColor;
+      font-size: $smallFont/1.4;
+      b {
+        color: $mainColor;
+        font-weight: 500;
+      }
+    }
+    h4 {
+      color: $darkColor;
+      margin: 10px 0;
+    }
+  }
+
+  .payment {
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    .price {
+      @include flex(row, flex-start, center, fls, 0px);
+      gap: 10px;
+      :nth-child(1) {
+        color: $mainColor;
+        font-weight: bold;
+        font-size: $primaryFont/1.1;
+      }
+      :nth-child(2) {
+        color: $grayColor;
+        text-decoration: line-through;
+        font-size: $smallFont/1.2;
+      }
+    }
+    button {
+      background-color: $primaryColor;
+      color: $darkMianColor;
+      font-weight: 600;
+      transition: scale 0.5s ease-in-out;
+      @include flex(row, center, center, fls, 0px);
+      padding: 8px;
+      img {
+        margin: 3px;
+      }
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+}
+//=============== Card || End ================>

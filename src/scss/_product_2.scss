@@ -1,0 +1,28 @@
+@use "./main" as *;
+
+#product_2 {
+  .products_2 {
+    width: 100%;
+    @include flex(row, flex-start, center, fls, 30px);
+    .cards {
+      display: grid;
+      padding: 20px;
+      grid-template-columns: repeat(12, 200px);
+      overflow: hidden;
+      margin: 0 30px;
+      gap: 10px;
+    }
+  }
+}
+@include media(sm) {
+  #product_2 {
+    .products_2 {
+      @include flex(row, flex-start, center, fls, 0px);
+      .cards {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 10px;
+      }
+    }
+  }
+}

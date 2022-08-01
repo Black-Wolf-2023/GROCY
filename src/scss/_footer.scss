@@ -1,0 +1,90 @@
+@use "./main" as *;
+
+footer {
+  margin: 0 100px;
+  border-top: 2px solid $lightGrayColor;
+  border-bottom: 2px solid $lightGrayColor;
+  main {
+    display: grid !important;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 70px;
+    .cont {
+      .logo {
+        padding-left: 15px;
+        img {
+          width: 200px;
+        }
+      }
+      a {
+        transition: color 0.2s ease-in-out;
+        color: $darkColor;
+        font-weight: 700;
+        font-size: $mainFont/1.7;
+        &:hover {
+          color: $darkMianColor;
+        }
+      }
+      .info {
+        margin: 10px 0;
+        gap: 3px;
+        @include flex(row, flex-start, center, fls, 0);
+      }
+      .info_parent {
+        margin: 20px;
+      }
+      h3 {
+        color: $darkColor;
+      }
+      .links {
+        margin-top: 30px;
+        @include flex(column, flex-start, flex-start, fls, 0);
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@include media(md) {
+  footer {
+    border: none;
+    border-top: 2px solid $lightGrayColor;
+    main {
+      grid-template-columns: 1fr;
+      width: 100%;
+      .cont {
+        width: 100%;
+        border-bottom: 2px solid $lightGrayColor;
+        padding: 10px;
+        .info_parent {
+          margin: 0px;
+        }
+        .logo {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media(sm) {
+  footer {
+    margin: 0px;
+    padding: 30px !important;
+    border: none;
+    border-top: 2px solid $lightGrayColor;
+    main {
+      grid-template-columns: 1fr;
+      .cont {
+        border-bottom: 2px solid $lightGrayColor;
+        padding: 10px;
+        padding-bottom: 10px;
+        .info_parent {
+          margin: 0px;
+        }
+        .logo {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

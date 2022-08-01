@@ -1,0 +1,80 @@
+@use "./main" as *;
+
+#ad-bar {
+  background-image: url("../../images/main/bd-img.png");
+  .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    .info {
+      @include flex(column, space-evenly, flex-start, fls, 0);
+      height: 50%;
+      h1 {
+        font-size: $mainFont * 2;
+        color: $darkColor;
+      }
+      h4 {
+        color: $grayColor;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+@include media(md) {
+  #ad-bar {
+    .container {
+      .info {
+        h1 {
+          font-size: $mainFont * 1.2;
+        }
+        h4 {
+          font-size: $mainFont/1.8;
+        }
+        .icons {
+          img {
+            width: 140px;
+          }
+          :nth-child(2) {
+            width: 130px;
+          }
+        }
+      }
+      .img {
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+@include media(sm) {
+  #ad-bar {
+    .container {
+      .info {
+        width: 300px;
+        h1 {
+          font-size: $mainFont * 1.2;
+        }
+        h4 {
+          font-size: $mainFont/1.8;
+        }
+        .icons {
+          img {
+            width: 140px;
+          }
+          :nth-child(2) {
+            width: 130px;
+          }
+        }
+      }
+      .img {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

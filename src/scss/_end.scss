@@ -1,0 +1,39 @@
+@use "./main" as *;
+
+#end {
+  .conts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 100%;
+    .cont {
+      @include flex(row, flex-start, center, fls, 0);
+      gap: 20px;
+      h4 {
+        padding: 10px 0;
+        color: $darkColor;
+      }
+      span {
+        color: $grayColor;
+      }
+    }
+  }
+}
+
+@include media(md) {
+  #end {
+    .conts {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}
+@include media(sm) {
+  #end {
+    .conts {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 60px;
+      justify-items: self-start;
+    }
+  }
+}

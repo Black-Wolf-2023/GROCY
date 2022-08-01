@@ -1,0 +1,144 @@
+@use "./main" as *;
+#product_3 {
+  .box {
+    > h1 {
+      padding: 30px 0;
+      color: $darkColor;
+    }
+  }
+  .products_3 {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin: 0 auto;
+      .register {
+        background-color: $lightYellowColor;
+        overflow: hidden;
+        .text {
+          text-align: center;
+          padding: 10px;
+          color: $darkColor;
+          margin-bottom: 20px;
+          h1 {
+            padding: 10px;
+          }
+        }
+        form {
+          padding: 10px;
+          label {
+            font-size: $mainFont/2;
+            font-weight: 600;
+            display: inline-block;
+            padding: 5px 0;
+          }
+          .inp {
+            background-color: $whiteColor;
+            @include flex(row, flex-start, center, fls, 0px);
+            padding: 10px;
+            input {
+              padding: 2px;
+            }
+            img {
+              padding: 2px 5px;
+            }
+          }
+          button {
+            width: 100%;
+            padding: 10px 30px;
+            margin-top: 50px;
+            background-color: $mainColor;
+            color: $whiteColor;
+            transition: scale 0.5s ease-in-out;
+            &:hover {
+              transform: scale(1.2);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .card {
+        .lines {
+          .cont_1 {
+            .line {
+              width: 100%;
+              height: 5px;
+              background-color: $lightGrayColor;
+              margin: 10px 0;
+              border-radius: 50px;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: $mainColor;
+                width: 80%;
+                height: 100%;
+                border-radius: 50px;
+              }
+            }
+            .num {
+              color: $darkColor;
+              font-size: $mainFont/1.7;
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+          }
+          .cont_2 {
+            overflow: hidden;
+            width: 100%;
+            button {
+              width: 100%;
+              background-color: $mainColor;
+              @include flex(row, center, center, fls, 0px);
+              gap: 5px;
+              padding: 10px;
+              color: $whiteColor;
+              border-radius: 2px;
+              transition: scale 0.5s ease-in-out;
+              &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media(md) {
+  #product_3 {
+    .products_3 {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@include media(sm) {
+  #product_3 {
+    .products_3 {
+      .cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 766px) {
+  #product_3 {
+    .box {
+      width: 100%;
+    }
+    .products_3 {
+      width: 100%;
+      .cards {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
