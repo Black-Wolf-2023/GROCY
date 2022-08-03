@@ -1,0 +1,23 @@
+nav
+  .collection
+    img(src="./images/icons/layout-grid.svg" alt="")
+    span Brows All Categories
+    //- Data For Links Of Nav Bar
+    - var srcs =["./images/icons/home.svg","./images/icons/hot-deals.svg","./images/icons/percent.svg","./images/icons/megaphone.svg"];
+    - var text =["Home","Hot deals","Promotions","New Products"];
+  ul
+    //- Make List Of Link Nav Bar
+    - for(var i = 0 ; i < srcs.length;i++){
+      li
+        a(href ="#")
+          img(src =srcs[i] alt=text[i])
+          |#{text[i]}
+    -}
+  .phone
+    img(src="./images/icons/phone.svg" alt="")
+    span 25245952
+    span 24/7 support center
+
+
+
+

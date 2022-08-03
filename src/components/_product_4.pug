@@ -1,0 +1,31 @@
+- var titles =["Top Sells","Top Rated","Trending Items","Recently Added"];
+- var images =[["./images/products/image-1.png","./images/products/image-2.png","./images/products/image-3.png",],["./images/products/image-4.png","./images/products/image-6.png","./images/products/image-7.png","./images/products/image-5.png","./images/products/image-1.png","./images/products/image-2.png",],[,"./images/products/image-3.png","./images/products/image-4.png","./images/products/image-5.png"]];
+- var prices_1 =[["$12","$32","$23"],["$3","$38","$19"],["$12","$32","$23"],["$3","$38","$19"]];
+- var prices_2 =[["$38","$43","$54"],["$93","$221","$123"],["$38","$43","$54"],["$93","$221","$123"]];
+- var start = 1;
+
+
+
+section(id="product_4" class="box")
+  .products_4
+    div(class ="conts box")
+      //-Loop For Add 4 Conts 
+      - for(var i = 0; i < titles.length; i++){
+        .cont
+          h3=titles[i]
+            //-Loop For Add 3 Product at one of Cont 
+          - for(var s = 0; s < images.length;s++){
+            .product
+              .img
+                img(src=images[start][s] alt=images[start][s])
+              .rate
+                h5 Orange 1kg
+                .starts
+                  - for(var b = 0;b < 4;b++){
+                    img(src="./images/icons/star.svg" alt="")
+                  -}
+                  img(src="./images/icons/star-space.svg" alt="")
+                span= prices_1[start][s]
+                span= prices_2[start][s]
+          -}
+      -}

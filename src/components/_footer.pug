@@ -1,0 +1,39 @@
+- var images = ["./images/icons/map-pin.svg","./images/icons/phone.svg","./images/icons/mail-2.svg","./images/icons/clock-9.svg"];
+- var info = ["Address: 1762 School House Road","Call Us: 01286292650","Email: ex800@gamil.com"," Work hours: 8:00 - 20:00, Sunday - Thursday"];
+- var links_1 = ["Wishlist","Cart","Track Order","Shipping Details"];
+- var links_2 = ["About Us","Conact","Hot deals","Promotions","New products"];
+- var links_3 = ["Payments","Refund","Checkout","Shipping","Q&A","Privacy Policy"];
+
+
+
+
+
+footer(class ="box")
+  main
+    .cont
+      .logo
+        img( src="./images/icons/logo.svg" alt="")
+      .info_parent
+        -for(var i = 0; i < images.length;i++){
+          .info
+            img(src=images[i] alt=images[i])
+            a(href="#")=info[i]
+        -}
+    .cont
+      h3 Account
+      .links
+        -for(var s = 0; s < links_1.length;s++){
+          a(href="#")=links_1[s]
+        -}
+    .cont
+      h3 Useful links
+      .links
+        -for(var d = 0; d < links_2.length;d++){
+          a(href="#")=links_2[d]
+        -}
+    .cont
+      h3 Help Center
+      .links
+        -for(var b = 0; b < links_3.length;b++){
+          a(href="#")=links_3[b]
+        -}

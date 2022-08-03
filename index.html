@@ -1,854 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!--============ META ============= -->
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GROCY</title>
-    <!--============= LINKS ============ -->
     <link rel="stylesheet" href="./src/css/app.css">
-    <link rel="shortcut icon" href="./images/load/4.svg" type="image/x-icon">
-</head>
-
-<body>
-    <!-- ========== Loading || Animation || Start ============ -->
-    <section id="animate">
-        <img src="./images/load/1.svg" alt="" id="slider_img">
-    </section>
-    <!-- ========== Loading || Animation || End ============ -->
-
-    <!-- ========== Header || Start ============ -->
+    <link rel="shortcut icon" href="./images/icons/fav.png" type="image/x-icon">
+    <title>GROCY</title>
+  </head>
+  <body> 
+    <section id="animate"> <img src="./images/load/1.svg" alt="Animater-imgs" id="slider_img"></section>
     <header>
-        <div class="logo"><img src="./images/icons/logo.svg" alt=""></div>
-        <div class="search">
-            <select name="" id="">
-                <option value="test">All Categories</option>
-                <option value="test">All Categories</option>
-                <option value="test">All Categories</option>
-                <option value="test">All Categories</option>
-            </select>
-            <div class="line"></div>
-            <input type="search" name="" id="" placeholder="search...">
-            <div class="seach-icon"><img src="./images/icons/search.svg" alt=""></div>
+      <div class="logo"><img src="./images/icons/logo.svg" alt=""></div>
+      <div class="search">
+        <select name="" id="">
+          <option>All Categories</option>
+          <option>All Categories</option>
+          <option>All Categories</option>
+          <option>All Categories</option>
+          <option>All Categories</option>
+        </select>
+        <div class="line"></div>
+        <input type="search" name="" id="" placeholder="search...">
+        <div class="seach-icon"><img src="./images/icons/search.svg" alt="search-icon"></div>
+      </div>
+      <div class="controlls">
+        <div class="heart"><a href="#"><img src="./images/icons/heart.svg" alt="heart-icon"></a><a href="#"><span>Wishlist</span></a></div>
+        <div class="shop-car"><a href="#"><img src="./images/icons/shop-car.svg" alt="shop-car-icon"></a>
+          <div class="text"><a href="#"><span>My car</span></a><a href="#"><span>21$</span></a></div><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a>
         </div>
-        <div class="controlls">
-            <div class="heart">
-                <a href="#"><img src="./images/icons/heart.svg" alt=""></a>
-                <a href="#"><span>Wishlist</span></a>
-            </div>
-            <div class="shop-car">
-                <a href=""><img src="./images/icons/shop-car.svg" alt=""></a>
-                <div class="text">
-                    <a href="#"><span>My car</span></a>
-                    <a href="#"><span>21$</span></a>
-                </div>
-                <a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a>
-            </div>
-            <div class="user">
-                <a href="#"><img src="./images/icons/user.svg" alt=""></a>
-                <a href="#"><span class="name">Abdalrhman</span></a>
-                <a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="toggle">
-            <a href="#"><img src="./images/icons/list.svg" alt=""></a>
-        </div>
+        <div class="user"><a href="#"><img src="./images/icons/user.svg" alt=""></a><a href="#"><span class="name">Abdalrhman</span></a><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a></div>
+      </div>
+      <div class="toggle"><a href="#"><img src="./images/icons/list.svg" alt=""></a></div>
     </header>
-    <!-- ========== Header || End ============ -->
-
-    <!-- ========== Nav || Start ============ -->
     <nav>
-        <div class="collection">
-            <img src="./images/icons/layout-grid.svg" alt="">
-            <span>Brows All Categories</span>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="./images/icons/home.svg" alt="">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./images/icons/hot-deals.svg" alt="">
-                    Hot deals
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./images/icons/percent.svg" alt="">
-                    Promotions
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./images/icons/megaphone.svg" alt="">
-                    New Products
-                </a>
-            </li>
-        </ul>
-        <div class="phone">
-            <img src="./images/icons/phone.svg" alt="">
-            <span>25245952</span>
-            <span>24/7 support center</span>
-        </div>
+      <div class="collection"><img src="./images/icons/layout-grid.svg" alt=""><span>Brows All Categories</span>
+      </div>
+      <ul>
+        <li><a href="#"><img src="./images/icons/home.svg" alt="Home">Home</a></li>
+        <li><a href="#"><img src="./images/icons/hot-deals.svg" alt="Hot deals">Hot deals</a></li>
+        <li><a href="#"><img src="./images/icons/percent.svg" alt="Promotions">Promotions</a></li>
+        <li><a href="#"><img src="./images/icons/megaphone.svg" alt="New Products">New Products</a></li>
+      </ul>
+      <div class="phone"><img src="./images/icons/phone.svg" alt=""><span>25245952</span><span>24/7 support center</span></div>
     </nav>
-    <!-- ========== Nav || End ============ -->
-
-    <!-- ========== Land || Start ============ -->
     <section id="land">
-        <div class="content">
-            <h1>Dont miss our daily <br> amazing deals.</h1>
-            <p>Save up to 60% off on your first order</p>
-            <div class="search">
-                <img src="./images/icons/send.svg" alt="">
-                <div class="line"></div>
-                <input type="search" name="" id="" placeholder="Enter your eamil address">
-                <div class="search-text">Subscribe</div>
-            </div>
+      <div class="content">
+        <h1>
+           Dont miss our daily <br>amazing deals.</h1>
+        <p>Save up to 60% off on your first order</p>
+        <div class="search"><img src="./images/icons/send.svg" alt="">
+          <div class="line"> </div>
+          <input type="search" name="" id="" placeholder="Enter your eamil address">
+          <div class="search-text">Subscribe</div>
         </div>
-        <img src="./images/main/hero-img.png" alt="">
+      </div><img src="./images/main/hero-img.png" alt="">
     </section>
-    <!-- ========== Land || End ============ -->
-
-    <!-- ========== Product_1 || Start ============ -->
-    <section id="product_1" class="box">
-        <div class="options">
-            <h1>
-                Explore Categories
-                <span class="slide-show">+</span>
-            </h1>
-            <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="#">Furuits</a></li>
-                <li><a href="#">Coffe & teas</a></li>
-                <li><a href="#">Meat</a></li>
-            </ul>
+    <section class="box" id="product_1">
+      <div class="options">
+        <h1>Explore Categories<span class="slide-show">+</span></h1>
+        <ul>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Vegetables</a></li>
+          <li><a href="#">Furuits</a></li>
+          <li><a href="#">Coffe & teas</a></li>
+          <li><a href="#">Meat</a></li>
+        </ul>
+      </div>
+      <div class="products">
+        <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
+        <div class="products-cont">
+          <div class="product-cont light-1"><img img src="./images/products/image-1.png" alt="">
+            <h3>Peach</h3>
+            <p>20 Item</p>
+          </div>
+          <div class="product-cont light-2"><img img src="./images/products/image-2.png" alt="">
+            <h3>Vegetables</h3>
+            <p>30 Item</p>
+          </div>
+          <div class="product-cont light-3"><img img src="./images/products/image-3.png" alt="">
+            <h3>Strawberry</h3>
+            <p>2 Item</p>
+          </div>
+          <div class="product-cont light-4"><img img src="./images/products/image-4.png" alt="">
+            <h3>Apple</h3>
+            <p>15 Item</p>
+          </div>
+          <div class="product-cont light-1"><img img src="./images/products/image-5.png" alt="">
+            <h3>Orange</h3>
+            <p>10 Item</p>
+          </div>
+          <div class="product-cont light-2"><img img src="./images/products/image-6.png" alt="">
+            <h3>Potato</h3>
+            <p>21 Item</p>
+          </div>
         </div>
-        <div class="products">
-            <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
-            <div class="products-cont">
-                <div class="product-cont light-1">
-                    <img src="./images/products/image-1.png" alt="">
-                    <h3>Peach</h3>
-                    <p>20 Item</p>
-                </div>
-                <div class="product-cont light-2">
-                    <img src="./images/products/image-2.png" alt="">
-                    <h3>Vegetables</h3>
-                    <p>30 Item</p>
-                </div>
-                <div class="product-cont light-3">
-                    <img src="./images/products/image-3.png" alt="">
-                    <h3>Strawberry</h3>
-                    <p>2 Item</p>
-                </div>
-                <div class="product-cont light-4">
-                    <img src="./images/products/image-4.png" alt="">
-                    <h3>Apple</h3>
-                    <p>15 Item</p>
-                </div>
-                <div class="product-cont light-1">
-                    <img src="./images/products/image-5.png" alt="">
-                    <h3>Orange</h3>
-                    <p>23 Item</p>
-                </div>
-                <div class="product-cont light-2">
-                    <img src="./images/products/image-6.png" alt="">
-                    <h3>Potato</h3>
-                    <p>10 Item</p>
-                </div>
-
-            </div>
-            <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
-        </div>
+        <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
+      </div>
     </section>
-    <!-- ========== Product_1 || End ============ -->
-
-    <!-- ========== Product_2 || Start ============ -->
-    <section id="product_2" class="box">
-        <div class="options">
-            <h1>
-                Featured Products
-                <span class="slide-show">+</span>
-            </h1>
-            <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="#">Furuits</a></li>
-                <li><a href="#">Coffe & teas</a></li>
-                <li><a href="#">Meat</a></li>
-            </ul>
-        </div>
-        <div class="products_2">
-            <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
-            <div class="cards">
-                <div class="card">
-                    <div class="img"><img src="./images/products/image-8.png" alt=""></div>
-                    <div class="details">
-                        <span>Vegetables</span>
-                        <h4>Redish 500g</h4>
-                        <div class="stars">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star-space.svg" alt="">
-                        </div>
-                        <span>By <b>Mr.food</b></span>
-                    </div>
-                    <div class="payment">
-                        <div class="price">
-                            <span>$2</span>
-                            <span>$3.99</span>
-                        </div>
-                        <button>
-                            <img src="./images/icons/shopping-cart-2.svg" alt="">
-                            Add
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="img"><img src="./images/products/image-9.png" alt=""></div>
-                    <div class="details">
-                        <span>Vegetables</span>
-                        <h4>Potatos 1kg</h4>
-                        <div class="stars">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star-space.svg" alt="">
-                        </div>
-                        <span>By <b>Mr.food</b></span>
-                    </div>
-                    <div class="payment">
-                        <div class="price">
-                            <span>$1</span>
-                            <span>$1.99</span>
-                        </div>
-                        <button>
-                            <img src="./images/icons/shopping-cart-2.svg" alt="">
-                            Add
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="img"><img src="./images/products/image-10.png" alt=""></div>
-                    <div class="details">
-                        <span>Vegetables</span>
-                        <h4>Tomatos 200g</h4>
-                        <div class="stars">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star-space.svg" alt="">
-                        </div>
-                        <span>By <b>Mr.food</b></span>
-                    </div>
-                    <div class="payment">
-                        <div class="price">
-                            <span>$.30</span>
-                            <span>$0.99</span>
-                        </div>
-                        <button>
-                            <img src="./images/icons/shopping-cart-2.svg" alt="">
-                            Add
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="img"><img src="./images/products/image-11.png" alt=""></div>
-                    <div class="details">
-                        <span>Vegetables</span>
-                        <h4>Broccoli 1kg</h4>
-                        <div class="stars">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star-space.svg" alt="">
-                        </div>
-                        <span>By <b>Mr.food</b></span>
-                    </div>
-                    <div class="payment">
-                        <div class="price">
-                            <span>$1.5</span>
-                            <span>$2.99</span>
-                        </div>
-                        <button>
-                            <img src="./images/icons/shopping-cart-2.svg" alt="">
-                            Add
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="img"><img src="./images/products/image-12.png" alt=""></div>
-                    <div class="details">
-                        <span>Vegetables</span>
-                        <h4>Green Beans 250g</h4>
-                        <div class="stars">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star.svg" alt="">
-                            <img src="./images/icons/star-space.svg" alt="">
-                        </div>
-                        <span>By <b>Mr.food</b></span>
-                    </div>
-                    <div class="payment">
-                        <div class="price">
-                            <span>$1</span>
-                            <span>$1.99</span>
-                        </div>
-                        <button>
-                            <img src="./images/icons/shopping-cart-2.svg" alt="">
-                            Add
-                        </button>
-                    </div>
-                </div>
+    <section class="box" id="product_2">
+      <div class="options">
+        <h1>Explore Categories<span class="slide-show">+</span></h1>
+        <ul>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Vegetables</a></li>
+          <li><a href="#">Furuits</a></li>
+          <li><a href="#">Coffe & teas</a></li>
+          <li><a href="#">Meat</a></li>
+        </ul>
+      </div>
+      <div class="products_2">
+        <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
+        <div class="cards">
+          <div class="card">
+            <div class="img"><img src="./images/products/image-8.png" alt=""></div>
+            <div class="details"><span>Vegetables</span>
+              <h4>Redish 500g</h4>
+              <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+              </div><span>By<b>Mr.food</b></span>
             </div>
-            <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
+            <div class="payment">
+              <div class="price"><span>$1.5</span><span>$2.99</span></div>
+              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"><img src="./images/products/image-9.png" alt=""></div>
+            <div class="details"><span>Vegetables</span>
+              <h4>Potatos 1kg</h4>
+              <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+              </div><span>By<b>Mr.food</b></span>
+            </div>
+            <div class="payment">
+              <div class="price"><span>$1.5</span><span>$2.99</span></div>
+              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"><img src="./images/products/image-10.png" alt=""></div>
+            <div class="details"><span>Vegetables</span>
+              <h4>Tomatos 200g</h4>
+              <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+              </div><span>By<b>Mr.food</b></span>
+            </div>
+            <div class="payment">
+              <div class="price"><span>$1.5</span><span>$2.99</span></div>
+              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"><img src="./images/products/image-11.png" alt=""></div>
+            <div class="details"><span>Vegetables</span>
+              <h4>Broccoli 1kg</h4>
+              <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+              </div><span>By<b>Mr.food</b></span>
+            </div>
+            <div class="payment">
+              <div class="price"><span>$1.5</span><span>$2.99</span></div>
+              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"><img src="./images/products/image-12.png" alt=""></div>
+            <div class="details"><span>Vegetables</span>
+              <h4>Green Beans 250g</h4>
+              <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+              </div><span>By<b>Mr.food</b></span>
+            </div>
+            <div class="payment">
+              <div class="price"><span>$1.5</span><span>$2.99</span></div>
+              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+            </div>
+          </div>
         </div>
+        <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
+      </div>
     </section>
-    <!-- ========== Product_2 || End ============ -->
-
-
-    <!-- ========== Ads || Start ============ -->
-    <section id="ads" class="box">
-        <div class="ads_parent">
-            <div class="cont">
-                <div class="detials">
-                    <span>free delivery</span>
-                    <h2>Free delivery over $50</h2>
-                    <h4>Shop 50$ product and get free <br> delivery anywhere</h4>
-                    <button>Shop Now <img src="./images/icons/arrow-right-light.png" alt=""></button>
-                </div>
-                <div class="img">
-                    <img src="./images/main/offer1-img.png" alt="" class="ads_img_1">
-                </div>
-            </div>
-            <div class="cont">
-                <div class="detials">
-                    <span>60% off</span>
-                    <h2>Organic Food</h2>
-                    <h4>Save up to 60% off on your<br>frist order</h4>
-                    <button>Order Now <img src="./images/icons/arrow-right-light.png" alt=""></button>
-                </div>
-                <div class="img">
-                    <img src="./images/main/offer2-img.png" alt="" class="ads_img_2">
-                </div>
-            </div>
+    <section class="box" id="ads">
+      <div class="ads_parent">
+        <div class="cont">
+          <div class="detials"><span>free delivery</span>
+            <h2>Free delivery over $50  </h2>
+            <h4>Shop 50$ product and get free <br> delivery anywhere</h4>
+            <button>Shop Now<img src="./images/icons/arrow-right-light.png" alt=""></button>
+          </div>
+          <div class="img"><img class="ads_img_1" src="./images/main/offer1-img.png" alt=""></div>
         </div>
-    </section>
-    <!-- ========== Ads || Start ============ -->
-
-
-    <!-- ========== Product_3 || Start ============ -->
-    <section id="product_3" class="box">
-        <div class="box">
-            <h1>Daily Best Sells</h1>
-            <div class="products_3">
-                <div class="cards">
-                    <div class="card">
-                        <div class="img"><img src="./images/products/image-21.png" alt=""></div>
-                        <div class="details">
-                            <span>Coffe & teas</span>
-                            <h4>Coffe 1kg</h4>
-                            <div class="stars">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>By <b>Mr.food</b></span>
-                        </div>
-                        <div class="payment">
-                            <div class="price">
-                                <span>$20</span>
-                                <span>$25</span>
-                            </div>
-                        </div>
-                        <div class="lines">
-                            <div class="cont_1">
-                                <div class="line"></div>
-                                <div class="num">
-                                    Sold: 20/50
-                                </div>
-                            </div>
-                            <div class="cont_2">
-                                <button><img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="img"><img src="./images/products/image-20.png" alt=""></div>
-                        <div class="details">
-                            <span>Meat</span>
-                            <h4>Halal Sausage 350g</h4>
-                            <div class="stars">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>By <b>Mr.food</b></span>
-                        </div>
-                        <div class="payment">
-                            <div class="price">
-                                <span>$4</span>
-                                <span>$10</span>
-                            </div>
-                        </div>
-                        <div class="lines">
-                            <div class="cont_1">
-                                <div class="line"></div>
-                                <div class="num">
-                                    Sold: 7/50
-                                </div>
-                            </div>
-                            <div class="cont_2">
-                                <button><img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="img"><img src="./images/products/image-14.png" alt=""></div>
-                        <div class="details">
-                            <span>Caffe & Teas</span>
-                            <h4>Green Tea 250g</h4>
-                            <div class="stars">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>By <b>Mr.food</b></span>
-                        </div>
-                        <div class="payment">
-                            <div class="price">
-                                <span>$3</span>
-                                <span>$7</span>
-                            </div>
-                        </div>
-                        <div class="lines">
-                            <div class="cont_1">
-                                <div class="line"></div>
-                                <div class="num">
-                                    Sold: 32/50
-                                </div>
-                            </div>
-                            <div class="cont_2">
-                                <button><img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="img"><img src="./images/products/image-13.png" alt=""></div>
-                        <div class="details">
-                            <span>Vegetables</span>
-                            <h4>Onion 1kg</h4>
-                            <div class="stars">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>By <b>Mr.food</b></span>
-                        </div>
-                        <div class="payment">
-                            <div class="price">
-                                <span>$0.50</span>
-                                <span>$2</span>
-                            </div>
-                        </div>
-                        <div class="lines">
-                            <div class="cont_1">
-                                <div class="line"></div>
-                                <div class="num">
-                                    Sold: 3/50
-                                </div>
-                            </div>
-                            <div class="cont_2">
-                                <button><img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="register">
-                        <div class="text">
-                            <h1>10% OFF</h1>
-                            <h5>For new member sign up at the first time</h5>
-                        </div>
-                        <form action="">
-                            <label for="email">Email address</label>
-                            <div class="inp">
-                                <img src="./images/icons/mail.svg" alt="">
-                                <input type="email" placeholder="ex800@gamil.com">
-                            </div>
-                            <label for="password">Password</label>
-                            <div class="inp">
-                                <img src="./images/icons/key.svg" alt="">
-                                <input type="email" placeholder="Maximum 8 characters">
-                            </div>
-                            <button>Rigister Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="cont"> 
+          <div class="detials"><span>60% off</span>
+            <h2>Organic Food  </h2>
+            <h4>Save up to 60% off on your<br>frist order</h4>
+            <button>Order Now<img src="./images/icons/arrow-right-light.png" alt=""></button>
+          </div>
+          <div class="img"><img class="ads_img_2" src="./images/main/offer2-img.png" alt=""></div>
         </div>
+      </div>
     </section>
-    <!-- ========== Product_3 || End ============ -->
-
-
-    <!-- ========== Product_4 || Start ============ -->
-    <section id="product_4" class="box">
-        <div class="products_4">
-            <div class="conts box">
-                <div class="cont">
-                    <h3>Top Sells</h3>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-5.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>12$</span>
-                            <span>14.99</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-2.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>29$</span>
-                            <span>30.21</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-3.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>23$</span>
-                            <span>40.32</span>
-                        </div>
-                    </div>
+    <section class="box" id="product_3">
+      <div class="box">
+        <h1>Daily Best Sells</h1>
+        <div class="products_3">
+          <div class="cards">
+            <div class="card"> 
+              <div class="img"><img src="./images/products/image-21.png" alt="Coffe &amp; teas"></div>
+              <div class="details"><span>Coffe &amp; teas</span>
+                <h4>Coffe 1kg</h4>
+                <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>By <b>Mr.food</b></span>
+              </div>
+              <div class="payment">
+                <div class="price"><span>$20</span><span>$25</span></div>
+              </div>
+              <div class="lines">
+                <div class="cont_1">
+                  <div class="lines"></div>
+                  <div class="num">Sold: 20/50</div>
                 </div>
-                <div class="cont">
-                    <h3>Top Rated</h3>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-1.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>12$</span>
-                            <span>14.99</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-2.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>29$</span>
-                            <span>30.21</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-4.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>23$</span>
-                            <span>40.32</span>
-                        </div>
-                    </div>
+                <div class="cont_2">
+                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
                 </div>
-
-                <div class="cont">
-                    <h3>Trending Items</h3>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-7.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>12$</span>
-                            <span>14.99</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-6.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>29$</span>
-                            <span>30.21</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-1.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>23$</span>
-                            <span>40.32</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cont">
-                    <h3>Recently Added</h3>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-3.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>12$</span>
-                            <span>14.99</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-6.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>29$</span>
-                            <span>30.21</span>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="img"><img src="./images/products/image-2.png" alt=""></div>
-                        <div class="rate">
-                            <h5>Orange 1kg</h5>
-                            <div class="starts">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star.svg" alt="">
-                                <img src="./images/icons/star-space.svg" alt="">
-                            </div>
-                            <span>23$</span>
-                            <span>40.32</span>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
+            <div class="card"> 
+              <div class="img"><img src="./images/products/image-20.png" alt="Meat"></div>
+              <div class="details"><span>Meat</span>
+                <h4>Halal Sausage 350g</h4>
+                <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>By <b>Mr.food</b></span>
+              </div>
+              <div class="payment">
+                <div class="price"><span>$4</span><span>$10</span></div>
+              </div>
+              <div class="lines">
+                <div class="cont_1">
+                  <div class="lines"></div>
+                  <div class="num">Sold: 7/50</div>
+                </div>
+                <div class="cont_2">
+                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card"> 
+              <div class="img"><img src="./images/products/image-14.png" alt="Caffe &amp; Teas"></div>
+              <div class="details"><span>Caffe &amp; Teas</span>
+                <h4>Green Tea 250g</h4>
+                <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>By <b>Mr.food</b></span>
+              </div>
+              <div class="payment">
+                <div class="price"><span>$3</span><span>$7</span></div>
+              </div>
+              <div class="lines">
+                <div class="cont_1">
+                  <div class="lines"></div>
+                  <div class="num"> Sold: 32/50</div>
+                </div>
+                <div class="cont_2">
+                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="card"> 
+              <div class="img"><img src="./images/products/image-13.png" alt="Vegetables"></div>
+              <div class="details"><span>Vegetables</span>
+                <h4>Onion 1kg</h4>
+                <div class="stars"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>By <b>Mr.food</b></span>
+              </div>
+              <div class="payment">
+                <div class="price"><span>$0.50</span><span>$2</span></div>
+              </div>
+              <div class="lines">
+                <div class="cont_1">
+                  <div class="lines"></div>
+                  <div class="num">Sold: 3/50</div>
+                </div>
+                <div class="cont_2">
+                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="register">
+              <div class="text">
+                <h1>10% OFF</h1>
+                <h5>For new member sign up at the first time</h5>
+              </div>
+              <form>
+                <label>Email address</label>
+                <div class="inp"><img src="./images/icons/mail.svg" alt="">
+                  <input type="email" placeholder="ex800@gamil.com">
+                </div>
+                <label>Password</label>
+                <div class="inp"><img src="./images/icons/key.svg" alt="">
+                  <input type="password" placeholder="Maximum 8 characters">
+                </div>
+                <button>Rigister Now  </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- ========== Product_4 || End ============ -->
-
-
-    <!-- ========== AD-Bar || Start ============ -->
-
-    <section id="ad-bar">
-        <div class="container box">
-            <div class="info">
-                <div class="text">
-                    <h1>Shop Faster With<br>Groceyish App</h1>
-                    <h4>Available on both IOS & Android</h4>
-                </div>
-                <div class="icons">
-                    <img src="./images/icons/google.svg" alt="">
-                    <img src="./images/icons/apple.svg" alt="">
-                </div>
-            </div>
-            <div class="img">
-                <img src="./images/main/app.png" alt="">
-            </div>
-        </div>
-    </section>
-    <!-- ========== AD-Bar || End ============ -->
-
-    <!-- ========== End || Start ============ -->
-
-    <section id="end" class="box">
+    <section class="box" id="product_4">
+      <div class="products_4">
         <div class="conts box">
-            <div class="cont">
-                <div class="img"><img src="./images/icons/svgexport.svg" alt=""></div>
-                <div class="text">
-                    <h4>Best Prices & Deals</h4>
-                    <span>Don’t miss our daily amazing <br> deals and prices</span>
-                </div>
+          <div class="cont">
+            <h3>Top Sells</h3>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-4.png" alt="./images/products/image-4.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$3</span><span>$93</span>
+              </div>
             </div>
-            <div class="cont">
-                <div class="img"><img src="./images/icons/svgex-port.svg" alt=""></div>
-                <div class="text">
-                    <h4>Refundable</h4>
-                    <span>If your items have damage <br> we agree to refund it</span>
-                </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-6.png" alt="./images/products/image-6.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$38</span><span>$221</span>
+              </div>
             </div>
-            <div class="cont">
-                <div class="img"><img src="./images/icons/car.svg" alt=""></div>
-                <div class="text">
-                    <h4>Free delivery</h4>
-                    <span>Do purchase over $50 and <br> get free delivery anywhere</span>
-                </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-7.png" alt="./images/products/image-7.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$19</span><span>$123</span>
+              </div>
             </div>
+          </div>
+          <div class="cont">
+            <h3>Top Rated</h3>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-4.png" alt="./images/products/image-4.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$3</span><span>$93</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-6.png" alt="./images/products/image-6.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$38</span><span>$221</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-7.png" alt="./images/products/image-7.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$19</span><span>$123</span>
+              </div>
+            </div>
+          </div>
+          <div class="cont">
+            <h3>Trending Items</h3>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-4.png" alt="./images/products/image-4.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$3</span><span>$93</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-6.png" alt="./images/products/image-6.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$38</span><span>$221</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-7.png" alt="./images/products/image-7.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$19</span><span>$123</span>
+              </div>
+            </div>
+          </div>
+          <div class="cont">
+            <h3>Recently Added</h3>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-4.png" alt="./images/products/image-4.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$3</span><span>$93</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-6.png" alt="./images/products/image-6.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$38</span><span>$221</span>
+              </div>
+            </div>
+            <div class="product">
+              <div class="img"><img src="./images/products/image-7.png" alt="./images/products/image-7.png"></div>
+              <div class="rate">
+                <h5>Orange 1kg</h5>
+                <div class="starts"><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star.svg" alt=""><img src="./images/icons/star-space.svg" alt="">
+                </div><span>$19</span><span>$123</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- ========== End || End ============ -->
-
-    <!-- ========== Footer || Start ============ -->
+    <section id="ad-bar">
+      <div class="container box">
+        <div class="info">
+          <div class="text"> 
+            <h1>Shop Faster With<br>Groceyish App</h1>
+            <h4>Available on both IOS & Android</h4>
+          </div>
+          <div class="icons"><img src="./images/icons/google.svg" alt=""><img src="./images/icons/apple.svg" alt=""></div>
+        </div>
+        <div class="img"><img src="./images/main/app.png" alt=""></div>
+      </div>
+    </section>
+    <section class="box" id="end">
+      <div class="conts box">
+        <div class="cont">
+          <div class="img"><img src="./images/icons/svgexport.svg" alt="./images/icons/svgexport.svg"></div>
+          <div class="text">
+            <h4>Best Prices &amp; Deals</h4><span>Don’t miss our daily amazing deals and prices</span>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="img"><img src="./images/icons/svgex-port.svg" alt="./images/icons/svgex-port.svg"></div>
+          <div class="text">
+            <h4>Refundable</h4><span>If your items have damage we agree to refund it</span>
+          </div>
+        </div>
+        <div class="cont">
+          <div class="img"><img src="./images/icons/car.svg" alt="./images/icons/car.svg"></div>
+          <div class="text">
+            <h4>Free delivery</h4><span>Do purchase over $50 and get free delivery anywhere</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="box">
-        <main>
-            <div class="cont">
-                <div class="logo"><img src="./images/icons/logo.svg" alt=""></div>
-                <div class="info_parent">
-                    <div class="info">
-                        <img src="./images/icons/map-pin.svg" alt="">
-                        <a href="#">Address: 1762 School House Road</a>
-                    </div>
-                    <div class="info">
-                        <img src="./images/icons/phone.svg" alt="">
-                        <a href="#">Call Us: 01286292650</a>
-                    </div>
-                    <div class="info">
-                        <img src="./images/icons/mail-2.svg" alt="">
-                        <a href="#">Email: ex800@gamil.com</a>
-                    </div>
-                    <div class="info">
-                        <img src="./images/icons/clock-9.svg" alt="">
-                        <a href="#"> Work hours: 8:00 - 20:00, Sunday - Thursday</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cont">
-                <h3>Account</h3>
-                <div class="links">
-                    <a href="#">Wishlist</a>
-                    <a href="#">Cart</a>
-                    <a href="#">Track Order</a>
-                    <a href="#">Shipping Details</a>
-                </div>
-            </div>
-            <div class="cont">
-                <h3>Useful links</h3>
-                <div class="links">
-                    <a href="#">About Us</a>
-                    <a href="#">Conact</a>
-                    <a href="#">Hot deals</a>
-                    <a href="#">Promotions</a>
-                    <a href="#">New products</a>
-                </div>
-            </div>
-            <div class="cont">
-                <h3>Help Center</h3>
-                <div class="links">
-                    <a href="#">Payments</a>
-                    <a href="#">Refund</a>
-                    <a href="#">Checkout</a>
-                    <a href="#">Shipping</a>
-                    <a href="#">Q&A</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
-        </main>
+      <main>
+        <div class="cont">
+          <div class="logo"><img src="./images/icons/logo.svg" alt=""></div>
+          <div class="info_parent">
+            <div class="info"><img src="./images/icons/map-pin.svg" alt="./images/icons/map-pin.svg"><a href="#">Address: 1762 School House Road</a></div>
+            <div class="info"><img src="./images/icons/phone.svg" alt="./images/icons/phone.svg"><a href="#">Call Us: 01286292650</a></div>
+            <div class="info"><img src="./images/icons/mail-2.svg" alt="./images/icons/mail-2.svg"><a href="#">Email: ex800@gamil.com</a></div>
+            <div class="info"><img src="./images/icons/clock-9.svg" alt="./images/icons/clock-9.svg"><a href="#"> Work hours: 8:00 - 20:00, Sunday - Thursday</a></div>
+          </div>
+        </div>
+        <div class="cont">
+          <h3>Account</h3>
+          <div class="links"><a href="#">Wishlist</a><a href="#">Cart</a><a href="#">Track Order</a><a href="#">Shipping Details</a>
+          </div>
+        </div>
+        <div class="cont">
+          <h3>Useful links</h3>
+          <div class="links"><a href="#">About Us</a><a href="#">Conact</a><a href="#">Hot deals</a><a href="#">Promotions</a><a href="#">New products</a>
+          </div>
+        </div>
+        <div class="cont">
+          <h3>Help Center</h3>
+          <div class="links"><a href="#">Payments</a><a href="#">Refund</a><a href="#">Checkout</a><a href="#">Shipping</a><a href="#">Q&amp;A</a><a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </main>
     </footer>
-    <!-- ========== Footer || End ============ -->
-
-    <!-- ========== Article || Start ============ -->
     <article>
-        <div class="copy_right">
-            © 2022 by <span>Abdalrhman Eldip ❤</span>, All rights reserved
-        </div>
-        <div class="visa">
-            <img src="./images/main/payment.png" alt="">
-        </div>
-        <div class="social">
-            <a href="#"><img src="./images/social/facebook.svg" alt=""></a>
-            <a href="#"><img src="./images/social/linkedin.svg" alt=""></a>
-            <a href="#"><img src="./images/social/instagram.svg" alt=""></a>
-            <a href="#"><img src="./images/social/tiwwter.svg" alt=""></a>
-        </div>
+      <div class="copy_right">
+        © 2022 by <span>Abdalrhman Eldip ❤</span>, All rights reserved</div>
+      <div class="visa"><img src="./images/main/payment.png" alt=""></div>
+      <div class="social"><a href="#"><img src="./images/social/facebook.svg" alt=""></a><a href="#"><img img src="./images/social/linkedin.svg" alt=""></a><a href="#"><img img src="./images/social/instagram.svg" alt=""></a><a href="#"><img src="./images/social/tiwwter.svg" alt=""></a></div>
     </article>
-    <!-- ========== Article || End ============ -->
-
-    <!-- ========== Scripts || Start ============ -->
     <script src="./src/js/index.js"></script>
-</body>
-
+  </body>
 </html>

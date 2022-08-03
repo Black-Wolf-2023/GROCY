@@ -1,0 +1,16 @@
+- var images= ["./images/icons/svgexport.svg","./images/icons/svgex-port.svg","./images/icons/car.svg"];
+- var titles= ["Best Prices & Deals","Refundable","Free delivery"];
+- var text= ["Don’t miss our daily amazing deals and prices","If your items have damage we agree to refund it","Do purchase over $50 and get free delivery anywhere"];
+
+
+
+section(id = "end" class = "box")
+  div(class = "conts box")
+    - for(var i = 0; i < images.length;i++){
+      .cont
+        .img
+          img(src=images[i] alt=images[i])
+        .text
+          h4=titles[i]
+          span=text[i] 
+    -}

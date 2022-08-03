@@ -1,0 +1,32 @@
+- var text= ["Redish 500g","Potatos 1kg","Tomatos 200g","Broccoli 1kg","Green Beans 250g"];
+section(class="box" id="product_2")
+  include ./_options
+  .products_2
+    .left
+      img(src="./images/icons/arrow-left.svg" alt="")
+    .cards
+      //- Loop For Make 5 Card
+      - for(var s=0; s < text.length;s++){
+        .card
+          .img
+            img(src = `./images/products/image-${8+s}.png` alt = "")
+          .details
+            span Vegetables
+            h4=text[s]
+            .stars
+              //- Loop For Make 5 Rate Of Stars
+              -for(var i = 0; i < 4;i++){
+              img(src="./images/icons/star.svg" alt="")
+              -}
+              img(src="./images/icons/star-space.svg" alt="")
+            span By<b>Mr.food</b>
+          .payment
+            .price
+              span $1.5
+              span $2.99
+            button
+              img(src="./images/icons/shopping-cart-2.svg" alt="")
+              |Add
+      -}
+    .right
+      img(src="./images/icons/arrow-right.svg" alt="")  

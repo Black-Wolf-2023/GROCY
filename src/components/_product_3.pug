@@ -1,0 +1,53 @@
+- var imgs= ["./images/products/image-21.png","./images/products/image-20.png","./images/products/image-14.png","./images/products/image-13.png"];
+- var names= ["Coffe & teas","Meat","Caffe & Teas","Vegetables"];
+- var titles= ["Coffe 1kg","Halal Sausage 350g","Green Tea 250g","Onion 1kg"];
+- var prices_1= ["$20","$4","$3","$0.50"];
+- var prices_2= ["$25","$10","$7","$2"];
+- var amount = ["Sold: 20/50","Sold: 7/50"," Sold: 32/50","Sold: 3/50"];
+
+
+section(class ="box" id="product_3")
+  .box
+    h1 Daily Best Sells
+    .products_3
+      .cards
+        - for(var i = 0; i < imgs.length; i++){
+          .card 
+            .img
+              img(src =imgs[i] alt =names[i])
+            .details
+              span= names[i]
+              h4= titles[i]
+              .stars
+                -for(var s = 0; s < 4;s++){
+                  img(src="./images/icons/star.svg" alt="")
+                -}
+                img(src="./images/icons/star-space.svg" alt="")
+              span By <b>Mr.food</b>
+            .payment
+              .price
+                span=prices_1[i]
+                span=prices_2[i]    
+            .lines
+              .cont_1
+                .lines
+                .num=amount[i]
+              .cont_2
+                button 
+                  img(src="./images/icons/shopping-cart.svg" alt="")
+                  |Add to cart
+        -}
+          .register
+            .text
+              h1 10% OFF
+              h5 For new member sign up at the first time
+            form
+              label Email address
+              .inp
+                img(src="./images/icons/mail.svg" alt="")
+                input(type="email" placeholder="ex800@gamil.com")
+              label Password
+              .inp
+                img(src="./images/icons/key.svg" alt="")
+                input( type="password" placeholder="Maximum 8 characters")
+              button Rigister Now  
