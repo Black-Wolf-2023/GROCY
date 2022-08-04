@@ -175,6 +175,8 @@ var Sign = /** @class */ (function () {
         this.btns = document.querySelectorAll('#sign .content .btn button');
         this.forms = document.querySelectorAll('#sign .content form');
         this.close = document.querySelector('#sign .content .close');
+        this.sign = document.querySelector('#sign');
+        this.user = document.querySelector('.user');
     }
     Sign.prototype.ShowHidden = function () {
         var _this = this;
@@ -206,8 +208,11 @@ var Sign = /** @class */ (function () {
                 }
             });
         });
+        this.user.addEventListener('click', function () {
+            _this.sign.classList.add('active_sign');
+        });
         this.close.addEventListener('click', function () {
-            console.log('hdi');
+            _this.sign.classList.remove('active_sign');
         });
     };
     return Sign;
@@ -215,4 +220,67 @@ var Sign = /** @class */ (function () {
 //============= Sign || Class================>
 var sign = new Sign();
 sign.ShowHidden();
+//============= Sign || Class================>
+var ShoppingCart = /** @class */ (function () {
+    function ShoppingCart() {
+        this.cont = document.querySelector("#shopping_cart .cont");
+        this.shopping_cart = document.querySelector('#shopping_cart');
+        this.close = document.querySelector("#shopping_cart .cont .close");
+        this.shop_car = document.querySelector(".controlls .shop-car");
+        this.total = document.querySelector('.total');
+        this.add_1 = document.querySelectorAll(".payment #add");
+        this.add_2 = document.querySelectorAll(".cont_2 #add");
+        this.num_of_products = document.querySelector('.num_of_products');
+        this.num = 0;
+        this.total_price = 0;
+    }
+    ShoppingCart.prototype.Adding_1 = function () {
+        var _this = this;
+        this.shop_car.addEventListener('click', function () {
+            _this.shopping_cart.classList.add('active_shopping_card');
+        });
+        this.close.addEventListener('click', function () {
+            _this.shopping_cart.classList.remove('active_shopping_card');
+            console.log(_this.close);
+        });
+        this.add_1.forEach(function (e) {
+            e.addEventListener("click", function () {
+                var data = [
+                    e.parentElement.parentElement.children[0].children[0].getAttribute('src'),
+                    e.parentElement.parentElement.children[1].children[0].innerText,
+                    e.parentElement.parentElement.children[1].children[1].innerText,
+                    e.parentElement.parentElement.children[2].children[0].children[0].innerText
+                ];
+                _this.num++;
+                _this.num_of_products.innerHTML = _this.num.toString();
+                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\">X</span>\n                        </div>\n                    </div>\n                ");
+                _this.total_price += Number(data[3].split('$')[1]);
+                _this.total.innerHTML = _this.total_price.toString() + "$";
+            });
+        });
+    };
+    ShoppingCart.prototype.Adding_2 = function () {
+        var _this = this;
+        this.add_2.forEach(function (e) {
+            e.addEventListener("click", function () {
+                var data = [
+                    e.parentElement.parentElement.parentElement.children[0].children[0].getAttribute('src'),
+                    e.parentElement.parentElement.parentElement.children[1].children[0].innerText,
+                    e.parentElement.parentElement.parentElement.children[1].children[1].innerText,
+                    e.parentElement.parentElement.parentElement.children[2].children[0].children[0].innerText
+                ];
+                _this.num++;
+                _this.num_of_products.innerHTML = _this.num.toString();
+                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\">X</span>\n                        </div>\n                    </div>\n                ");
+                _this.total_price += Number(data[3].split('$')[1]);
+                _this.total.innerHTML = _this.total_price.toString() + "$";
+            });
+        });
+    };
+    return ShoppingCart;
+}());
+//============= Sign || Class================>
+var shoppingcart = new ShoppingCart();
+shoppingcart.Adding_1();
+shoppingcart.Adding_2();
 //============= Sign || Class================>

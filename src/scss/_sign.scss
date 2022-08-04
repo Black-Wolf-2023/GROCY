@@ -1,16 +1,7 @@
 @use "./main" as *;
 
 #sign {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 100%;
-  transition: all 0.5s ease-in-out;
-  bottom: 0;
-  z-index: 10000;
-  background-color: rgba($color: $darkColor, $alpha: 0.5);
-  display: flex;
-  justify-content: flex-end;
+  @extend %fixed;
   .content {
     background-color: $whiteColor;
     width: 300px;
@@ -83,16 +74,7 @@
       display: flex;
     }
     .close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: $mainFont * 1.2;
-      font-weight: bolder;
-      cursor: pointer;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        transform: rotate(90deg);
-      }
+      @extend %close;
     }
   }
 }

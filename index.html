@@ -26,7 +26,7 @@
       </div>
       <div class="controlls">
         <div class="heart"><a href="#"><img src="./images/icons/heart.svg" alt="heart-icon"></a><a href="#"><span>Wishlist</span></a></div>
-        <div class="shop-car"><a href="#"><img src="./images/icons/shop-car.svg" alt="shop-car-icon"></a>
+        <div class="shop-car"><a href="#"><img src="./images/icons/shop-car.svg" alt="shop-car-icon"><span class="num_of_products">0</span></a>
           <div class="text"><a href="#"><span>My car</span></a><a href="#"><span>21$</span></a></div><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a>
         </div>
         <div class="user"><a href="#"><img src="./images/icons/user.png" alt="" width="25px" height="25px"></a><a href="#"><span class="name">Log in / Sign in</span></a><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a></div>
@@ -122,7 +122,7 @@
             </div>
             <div class="payment">
               <div class="price"><span>$1.5</span><span>$2.99</span></div>
-              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+              <button id="add"><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
           <div class="card" id="vg">
@@ -133,8 +133,8 @@
               </div><span>By<b>Mr.food</b></span>
             </div>
             <div class="payment">
-              <div class="price"><span>$1.5</span><span>$2.99</span></div>
-              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+              <div class="price"><span>$22.5</span><span>$2.99</span></div>
+              <button id="add"><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
           <div class="card" id="vg">
@@ -145,8 +145,8 @@
               </div><span>By<b>Mr.food</b></span>
             </div>
             <div class="payment">
-              <div class="price"><span>$1.5</span><span>$2.99</span></div>
-              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+              <div class="price"><span>$21</span><span>$2.99</span></div>
+              <button id="add"><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
           <div class="card" id="fr">
@@ -157,8 +157,8 @@
               </div><span>By<b>Mr.food</b></span>
             </div>
             <div class="payment">
-              <div class="price"><span>$1.5</span><span>$2.99</span></div>
-              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+              <div class="price"><span>$2.9</span><span>$2.99</span></div>
+              <button id="add"><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
           <div class="card" id="vg">
@@ -169,8 +169,8 @@
               </div><span>By<b>Mr.food</b></span>
             </div>
             <div class="payment">
-              <div class="price"><span>$1.5</span><span>$2.99</span></div>
-              <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
+              <div class="price"><span>$50</span><span>$2.99</span></div>
+              <button id="add"><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
           <div class="text_hidden_ele">No Products Found</div>
@@ -219,7 +219,7 @@
                   <div class="num">Sold: 20/50</div>
                 </div>
                 <div class="cont_2">
-                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                  <button id="add"> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@
                   <div class="num">Sold: 7/50</div>
                 </div>
                 <div class="cont_2">
-                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                  <button id="add"> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -259,7 +259,7 @@
                   <div class="num"> Sold: 32/50</div>
                 </div>
                 <div class="cont_2">
-                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                  <button id="add"> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -279,7 +279,7 @@
                   <div class="num">Sold: 3/50</div>
                 </div>
                 <div class="cont_2">
-                  <button> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
+                  <button id="add"> <img src="./images/icons/shopping-cart.svg" alt="">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -510,6 +510,15 @@
           <input type="password" id="" placeholder="Confirm password">
           <input type="submit" id="submit" value="Sign in Now">
         </form>
+      </div>
+    </section>
+    <section id="shopping_cart">
+      <div class="cont">
+        <div class="close">X</div>
+        <div class="header"><img src="../images/icons/shopping-cart.png" alt="" width="30px" height="30px">
+          <h3>Shopping-Cart </h3>
+        </div>
+        <div class="total">TOTAL : 00$</div>
       </div>
     </section>
     <script src="./src/js/index.js"></script>

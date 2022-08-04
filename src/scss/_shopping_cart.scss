@@ -1,0 +1,69 @@
+@use "./main" as *;
+
+#shopping_cart {
+  @extend %fixed;
+  transition: all 0.5s ease-in-out;
+  .cont {
+    background-color: $whiteColor;
+    padding: 20px;
+    overflow: auto;
+    .header {
+      @include flex(row, center, center, fls, 0px);
+      gap: 10px;
+      margin-top: 50px;
+      h3 {
+        color: $mainColor;
+      }
+    }
+    .close {
+      @extend %close;
+    }
+    .detailes {
+      background-color: $primaryColor;
+      position: relative;
+      @include flex(row, flex-start, center, fls, 0px);
+      padding: 10px;
+      margin: 20px 0;
+      gap: 10px;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+      .content {
+        padding: 10px;
+        @include flex(row, flex-start, center, fls, 0px);
+        gap: 5px;
+        color: $darkColor;
+        font-weight: bold;
+        #deleter_product {
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          color: $lightColor;
+          cursor: pointer;
+          font-size: $mainFont/1.2;
+        }
+      }
+    }
+    .total {
+      background-color: $mainColor;
+      padding: 10px 30px;
+      color: $whiteColor;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+}
+.active_shopping_card {
+  right: 0 !important;
+}
+@include media(sm) {
+  #shopping_cart {
+    .cont {
+      .content {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

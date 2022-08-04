@@ -1,4 +1,5 @@
 - var text= ["Redish 500g","Potatos 1kg","Tomatos 200g","Broccoli 1kg","Green Beans 250g"];
+- var price= ["$1.5","$22.5","$21","$2.9","$50"];
 - var elements_id= ["fr","vg","vg","fr","vg"];
 section(class="box" id="product_2")
   include ./_options
@@ -23,9 +24,9 @@ section(class="box" id="product_2")
             span By<b>Mr.food</b>
           .payment
             .price
-              span $1.5
+              span=price[s]
               span $2.99
-            button
+            button(id="add")
               img(src="./images/icons/shopping-cart-2.svg" alt="")
               |Add
       -}

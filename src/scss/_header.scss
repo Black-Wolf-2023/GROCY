@@ -37,6 +37,19 @@ header {
         font-size: $primaryFont/1.3;
       }
     }
+    .shop-car {
+      > :nth-child(1) {
+        position: relative;
+        span {
+          position: absolute;
+          top: 2px;
+          right: 5px;
+          z-index: 10;
+          color: $whiteColor;
+          font-size: $primaryFont/2;
+        }
+      }
+    }
   }
   .search {
     @include flex(row, space-between, center, nowarp, 0px);
@@ -57,11 +70,6 @@ header {
       color: $darkColor;
       font-weight: 600;
       cursor: pointer;
-    }
-    .line {
-      width: 2px;
-      height: 10px;
-      background-color: $grayColor;
     }
     .seach-icon {
       @include flex(row, center, center, nowarp, 10px);
@@ -108,7 +116,7 @@ header {
       transition: all 0.5s ease-in;
       transition-delay: 0.6s;
       margin: 0;
-      bottom: -340%;
+      bottom: -333%;
       width: 100%;
       left: -110%;
       transform: rotate(-60deg);

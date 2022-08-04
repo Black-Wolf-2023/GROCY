@@ -63,7 +63,7 @@ activtiy.ActiveOpions();
 //============= Activity || Class================>
 class Animations{
     Animater(img: HTMLElement, sec: HTMLElement) {
-        // sec.style.display = "none";
+        sec.style.display = "none";
         let srcs = [
             './images/load/1.svg',
             './images/load/2.svg',
@@ -236,8 +236,124 @@ class Sign{
     }
 }
 
-
 //============= Sign || Class================>
 const sign = new Sign();
 sign.ShowHidden();
 //============= Sign || Class================>
+
+
+
+class ShoppingCart{
+    cont: HTMLElement;
+    close: HTMLElement;
+    shop_car: HTMLElement;
+    total: HTMLElement;
+    shopping_cart: HTMLElement;
+    add_1: NodeList;
+    add_2: NodeList;
+    num_of_products: HTMLElement;
+    num: number;
+    total_price: number;
+    constructor() {
+        this.cont = document.querySelector("#shopping_cart .cont")!;
+        this.shopping_cart = document.querySelector('#shopping_cart')!;
+        this.close = document.querySelector("#shopping_cart .cont .close") !;
+        this.shop_car = document.querySelector(".controlls .shop-car")!;
+        this.total = document.querySelector('.total')!;
+        this.add_1 = document.querySelectorAll(".payment #add")!;
+        this.add_2 = document.querySelectorAll(".cont_2 #add")!;
+        this.num_of_products = document.querySelector('.num_of_products')!;
+        this.num = 0;
+        this.total_price = 0;
+    }
+
+
+    Adding_1(){
+        this.shop_car.addEventListener('click', () => {
+            this.shopping_cart.classList.add('active_shopping_card');
+        })
+        this.close.addEventListener('click', () => {
+            this.shopping_cart.classList.remove('active_shopping_card'); 
+            console.log(this.close);
+        
+        })
+        this.add_1.forEach((e:any) => {
+            e.addEventListener("click", () => {
+                let data = [
+                    e.parentElement.parentElement.children[0].children[0].getAttribute('src'),
+                    e.parentElement.parentElement.children[1].children[0].innerText,
+                    e.parentElement.parentElement.children[1].children[1].innerText,
+                    e.parentElement.parentElement.children[2].children[0].children[0].innerText
+                ];                
+                this.cont.insertAdjacentHTML('beforeend', `
+                    <div class="detailes">
+                        <img src="${data[0]}" alt=""/>
+                        <div class="content">
+                            <div class="price">${data[3]}</div>
+                            <div class="line"></div>
+                            <div class="title">${data[2]}</div>
+                            <div class="line"></div>
+                            <div class="type">${data[1]}</div>
+                            <span id="deleter_product" onclick="test(this)">X</span>
+                        </div>
+                    </div>
+                `);
+                this.num = document.querySelectorAll(".cont .detailes").length;
+                this.num_of_products.innerHTML = this.num.toString();
+                this.total_price += Number(data[3].split('$')[1]);
+                this.total.innerHTML = this.total_price.toString() + "$";
+            })
+        })
+    }
+
+    Adding_2() {
+        this.add_2.forEach((e:any) => {
+            e.addEventListener("click", () => {
+                let data = [
+                   e.parentElement.parentElement.parentElement.children[0].children[0].getAttribute('src'),
+                   e.parentElement.parentElement.parentElement.children[1].children[0].innerText,
+                   e.parentElement.parentElement.parentElement.children[1].children[1].innerText,
+                   e.parentElement.parentElement.parentElement.children[2].children[0].children[0].innerText
+                ];
+                this.num++;
+                this.num_of_products.innerHTML = this.num.toString();
+                this.cont.insertAdjacentHTML('beforeend', `
+                    <div class="detailes">
+                        <img src="${data[0]}" alt=""/>
+                        <div class="content">
+                            <div class="price">${data[3]}</div>
+                            <div class="line"></div>
+                            <div class="title">${data[2]}</div>
+                            <div class="line"></div>
+                            <div class="type">${data[1]}</div>
+                            <span id="deleter_product" onclick="test(this)">X</span>
+                        </div>
+                    </div>
+                `);
+                this.total_price += Number(data[3].split('$')[1]);
+                this.total.innerHTML = this.total_price.toString() + "$";
+            })
+        })
+    }
+}
+
+//============= Sign || Class================>
+const shoppingcart= new ShoppingCart();
+shoppingcart.Adding_1();
+shoppingcart.Adding_2();
+//============= Sign || Class================>
+
+
+
+function test(e:any) {
+    let num_1 = Number( document.querySelector(".total")!.innerHTML.split("$")[0])
+    let num_2 = Number(e.parentElement.children[0].innerText.split("$")[1]);
+    let num_of_products = document.querySelector('.num_of_products')!;
+    let totaly = 0;
+    let num = 0;
+    totaly = num_1 - num_2;
+    e.parentElement.parentElement.remove();
+    document.querySelector(".total")!.innerHTML = totaly.toString() + "$";
+    num = document.querySelectorAll(".cont .detailes").length;
+    num_of_products.innerHTML = num.toString();
+}
