@@ -53,7 +53,6 @@ activtiy.ActiveOpions();
 //============= Activity || Class================>
 class Animations {
     Animater(img, sec) {
-        sec.style.display = "none";
         let srcs = [
             './images/load/1.svg',
             './images/load/2.svg',

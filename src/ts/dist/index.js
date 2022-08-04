@@ -58,7 +58,6 @@ var Animations = /** @class */ (function () {
     function Animations() {
     }
     Animations.prototype.Animater = function (img, sec) {
-        sec.style.display = "none";
         var srcs = [
             './images/load/1.svg',
             './images/load/2.svg',
@@ -251,9 +250,9 @@ var ShoppingCart = /** @class */ (function () {
                     e.parentElement.parentElement.children[1].children[1].innerText,
                     e.parentElement.parentElement.children[2].children[0].children[0].innerText
                 ];
-                _this.num++;
+                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\" onclick=\"test(this)\">X</span>\n                        </div>\n                    </div>\n                ");
+                _this.num = document.querySelectorAll(".cont .detailes").length;
                 _this.num_of_products.innerHTML = _this.num.toString();
-                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\">X</span>\n                        </div>\n                    </div>\n                ");
                 _this.total_price += Number(data[3].split('$')[1]);
                 _this.total.innerHTML = _this.total_price.toString() + "$";
             });
@@ -271,7 +270,7 @@ var ShoppingCart = /** @class */ (function () {
                 ];
                 _this.num++;
                 _this.num_of_products.innerHTML = _this.num.toString();
-                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\">X</span>\n                        </div>\n                    </div>\n                ");
+                _this.cont.insertAdjacentHTML('beforeend', "\n                    <div class=\"detailes\">\n                        <img src=\"" + data[0] + "\" alt=\"\"/>\n                        <div class=\"content\">\n                            <div class=\"price\">" + data[3] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"title\">" + data[2] + "</div>\n                            <div class=\"line\"></div>\n                            <div class=\"type\">" + data[1] + "</div>\n                            <span id=\"deleter_product\" onclick=\"test(this)\">X</span>\n                        </div>\n                    </div>\n                ");
                 _this.total_price += Number(data[3].split('$')[1]);
                 _this.total.innerHTML = _this.total_price.toString() + "$";
             });
@@ -284,3 +283,15 @@ var shoppingcart = new ShoppingCart();
 shoppingcart.Adding_1();
 shoppingcart.Adding_2();
 //============= Sign || Class================>
+function test(e) {
+    var num_1 = Number(document.querySelector(".total").innerHTML.split("$")[0]);
+    var num_2 = Number(e.parentElement.children[0].innerText.split("$")[1]);
+    var num_of_products = document.querySelector('.num_of_products');
+    var totaly = 0;
+    var num = 0;
+    totaly = num_1 - num_2;
+    e.parentElement.parentElement.remove();
+    document.querySelector(".total").innerHTML = totaly.toString() + "$";
+    num = document.querySelectorAll(".cont .detailes").length;
+    num_of_products.innerHTML = num.toString();
+}
