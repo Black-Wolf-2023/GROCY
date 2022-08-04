@@ -1,4 +1,5 @@
 -var product_cont_1= ["Peach","Vegetables","Strawberry","Apple","Orange","Potato"];
+-var product_cont_id= ["fr","vg","fr","fr","fr","vg"];
 -var product_cont_2= ["20 Item","30 Item","2 Item","15 Item","10 Item","21 Item"];
 -var product_class= ["light-1","light-2","light-3","light-4","light-1","light-2"];
 section(id ="product_1" class ="box")
@@ -9,10 +10,11 @@ section(id ="product_1" class ="box")
     .products-cont
       //- Loop To Add Product-cont Dynamic Data
       -for(var i =0; i < product_cont_1.length;i++){
-        div(class=`product-cont ${product_class[i]}`)
+        div(class=`product-cont ${product_class[i]}` id =`${product_cont_id[i]}`)
           img(img src=`./images/products/image-${i+1}.png` alt="")  
           h3= product_cont_1[i]
           p= product_cont_2[i]      
       -}
+      .text_hidden_ele No Products Found
     .right
       img(src="./images/icons/arrow-right.svg" alt="")

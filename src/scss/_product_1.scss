@@ -6,7 +6,7 @@
     width: 100%;
     @include flex(row, flex-start, center, fls, 30px);
     .products-cont {
-      overflow: hidden;
+      overflow: auto;
       margin: 0 30px;
       width: 100%;
       @include flex(row, flex-start, flex-start, fls, 0px);

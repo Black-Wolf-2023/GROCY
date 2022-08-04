@@ -29,9 +29,9 @@
         <div class="shop-car"><a href="#"><img src="./images/icons/shop-car.svg" alt="shop-car-icon"></a>
           <div class="text"><a href="#"><span>My car</span></a><a href="#"><span>21$</span></a></div><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a>
         </div>
-        <div class="user"><a href="#"><img src="./images/icons/user.svg" alt=""></a><a href="#"><span class="name">Abdalrhman</span></a><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a></div>
+        <div class="user"><a href="#"><img src="./images/icons/user.png" alt="" width="25px" height="25px"></a><a href="#"><span class="name">Log in / Sign in</span></a><a href="#"><img src="./images/icons/arrow-down.svg" alt=""></a></div>
       </div>
-      <div class="toggle"><a href="#"><img src="./images/icons/list.svg" alt=""></a></div>
+      <div class="toggle"><img src="./images/icons/list.svg" alt=""></div>
     </header>
     <nav>
       <div class="collection"><img src="./images/icons/layout-grid.svg" alt=""><span>Brows All Categories</span>
@@ -60,40 +60,41 @@
       <div class="options">
         <h1>Explore Categories<span class="slide-show">+</span></h1>
         <ul>
-          <li><a href="#">All</a></li>
-          <li><a href="#">Vegetables</a></li>
-          <li><a href="#">Furuits</a></li>
-          <li><a href="#">Coffe & teas</a></li>
-          <li><a href="#">Meat</a></li>
+          <li><a id="all">All</a></li>
+          <li><a id="vg">Vegetables</a></li>
+          <li><a id="fr">Furuits</a></li>
+          <li><a id="cf">Coffe & teas</a></li>
+          <li><a id="mt">Meat</a></li>
         </ul>
       </div>
       <div class="products">
         <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
         <div class="products-cont">
-          <div class="product-cont light-1"><img img src="./images/products/image-1.png" alt="">
+          <div class="product-cont light-1" id="fr"><img img src="./images/products/image-1.png" alt="">
             <h3>Peach</h3>
             <p>20 Item</p>
           </div>
-          <div class="product-cont light-2"><img img src="./images/products/image-2.png" alt="">
+          <div class="product-cont light-2" id="vg"><img img src="./images/products/image-2.png" alt="">
             <h3>Vegetables</h3>
             <p>30 Item</p>
           </div>
-          <div class="product-cont light-3"><img img src="./images/products/image-3.png" alt="">
+          <div class="product-cont light-3" id="fr"><img img src="./images/products/image-3.png" alt="">
             <h3>Strawberry</h3>
             <p>2 Item</p>
           </div>
-          <div class="product-cont light-4"><img img src="./images/products/image-4.png" alt="">
+          <div class="product-cont light-4" id="fr"><img img src="./images/products/image-4.png" alt="">
             <h3>Apple</h3>
             <p>15 Item</p>
           </div>
-          <div class="product-cont light-1"><img img src="./images/products/image-5.png" alt="">
+          <div class="product-cont light-1" id="fr"><img img src="./images/products/image-5.png" alt="">
             <h3>Orange</h3>
             <p>10 Item</p>
           </div>
-          <div class="product-cont light-2"><img img src="./images/products/image-6.png" alt="">
+          <div class="product-cont light-2" id="vg"><img img src="./images/products/image-6.png" alt="">
             <h3>Potato</h3>
             <p>21 Item</p>
           </div>
+          <div class="text_hidden_ele">No Products Found</div>
         </div>
         <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
       </div>
@@ -102,17 +103,17 @@
       <div class="options">
         <h1>Explore Categories<span class="slide-show">+</span></h1>
         <ul>
-          <li><a href="#">All</a></li>
-          <li><a href="#">Vegetables</a></li>
-          <li><a href="#">Furuits</a></li>
-          <li><a href="#">Coffe & teas</a></li>
-          <li><a href="#">Meat</a></li>
+          <li><a id="all">All</a></li>
+          <li><a id="vg">Vegetables</a></li>
+          <li><a id="fr">Furuits</a></li>
+          <li><a id="cf">Coffe & teas</a></li>
+          <li><a id="mt">Meat</a></li>
         </ul>
       </div>
       <div class="products_2">
         <div class="left"><img src="./images/icons/arrow-left.svg" alt=""></div>
         <div class="cards">
-          <div class="card">
+          <div class="card" id="fr">
             <div class="img"><img src="./images/products/image-8.png" alt=""></div>
             <div class="details"><span>Vegetables</span>
               <h4>Redish 500g</h4>
@@ -124,7 +125,7 @@
               <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="vg">
             <div class="img"><img src="./images/products/image-9.png" alt=""></div>
             <div class="details"><span>Vegetables</span>
               <h4>Potatos 1kg</h4>
@@ -136,7 +137,7 @@
               <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="vg">
             <div class="img"><img src="./images/products/image-10.png" alt=""></div>
             <div class="details"><span>Vegetables</span>
               <h4>Tomatos 200g</h4>
@@ -148,7 +149,7 @@
               <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="fr">
             <div class="img"><img src="./images/products/image-11.png" alt=""></div>
             <div class="details"><span>Vegetables</span>
               <h4>Broccoli 1kg</h4>
@@ -160,7 +161,7 @@
               <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="vg">
             <div class="img"><img src="./images/products/image-12.png" alt=""></div>
             <div class="details"><span>Vegetables</span>
               <h4>Green Beans 250g</h4>
@@ -172,6 +173,7 @@
               <button><img src="./images/icons/shopping-cart-2.svg" alt="">Add</button>
             </div>
           </div>
+          <div class="text_hidden_ele">No Products Found</div>
         </div>
         <div class="right"><img src="./images/icons/arrow-right.svg" alt=""></div>
       </div>
@@ -484,6 +486,32 @@
       <div class="visa"><img src="./images/main/payment.png" alt=""></div>
       <div class="social"><a href="#"><img src="./images/social/facebook.svg" alt=""></a><a href="#"><img img src="./images/social/linkedin.svg" alt=""></a><a href="#"><img img src="./images/social/instagram.svg" alt=""></a><a href="#"><img src="./images/social/tiwwter.svg" alt=""></a></div>
     </article>
+    <section id="sign">
+      <div class="content"><span class="close">X</span>
+        <div class="btn">
+          <button class="active-btn-form">Login</button>
+          <button>Sign in</button>
+        </div>
+        <form class="active_from">
+          <h1>LOGIN FORM</h1>
+          <input type="email" id="" placeholder="Email">
+          <input type="password" id="" placeholder="password">
+          <div class="rem"> 
+            <label for="remm">Remmber Me</label>
+            <input type="checkbox" id="remm">
+          </div>
+          <input type="submit" id="submit" value="Login Now"><a>Forget Password ?</a>
+        </form>
+        <form>
+          <h1>LOGIN FORM</h1>
+          <input type="text" id="" placeholder="User Name">
+          <input type="email" id="" placeholder="Email">
+          <input type="password" id="" placeholder="password">
+          <input type="password" id="" placeholder="Confirm password">
+          <input type="submit" id="submit" value="Sign in Now">
+        </form>
+      </div>
+    </section>
     <script src="./src/js/index.js"></script>
   </body>
 </html>

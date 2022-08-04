@@ -1,4 +1,5 @@
 - var text= ["Redish 500g","Potatos 1kg","Tomatos 200g","Broccoli 1kg","Green Beans 250g"];
+- var elements_id= ["fr","vg","vg","fr","vg"];
 section(class="box" id="product_2")
   include ./_options
   .products_2
@@ -7,7 +8,7 @@ section(class="box" id="product_2")
     .cards
       //- Loop For Make 5 Card
       - for(var s=0; s < text.length;s++){
-        .card
+        div(class="card" id=`${elements_id[s]}`)
           .img
             img(src = `./images/products/image-${8+s}.png` alt = "")
           .details
@@ -28,5 +29,6 @@ section(class="box" id="product_2")
               img(src="./images/icons/shopping-cart-2.svg" alt="")
               |Add
       -}
+        .text_hidden_ele No Products Found
     .right
       img(src="./images/icons/arrow-right.svg" alt="")  

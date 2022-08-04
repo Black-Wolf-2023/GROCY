@@ -1,6 +1,5 @@
-"use strict";
-class Activtiy {
-    constructor() {
+var Activtiy = /** @class */ (function () {
+    function Activtiy() {
         this.header = document.querySelector('header');
         this.controlls = document.querySelector('header .controlls');
         this.search = document.querySelector('header .search');
@@ -11,58 +10,64 @@ class Activtiy {
         this.options = document.querySelectorAll('.options');
         this.options_header = document.querySelectorAll('.options h1');
     }
-    ActiveHeaderEle() {
-        this.toggle.addEventListener('click', _ => {
-            this.search.classList.toggle('active-sm');
-            this.controlls.classList.toggle('active-md');
-            this.controlls.classList.toggle('active-sm');
-            this.nav.classList.toggle('active');
+    Activtiy.prototype.ActiveHeaderEle = function () {
+        var _this = this;
+        this.toggle.addEventListener('click', function (_) {
+            _this.search.classList.toggle('active-sm');
+            _this.controlls.classList.toggle('active-md');
+            _this.controlls.classList.toggle('active-sm');
+            _this.nav.classList.toggle('active');
         });
-    }
-    ActiveHeaderScroll() {
-        window.addEventListener('scroll', _ => {
+    };
+    Activtiy.prototype.ActiveHeaderScroll = function () {
+        var _this = this;
+        window.addEventListener('scroll', function (_) {
             if (window.scrollY !== 0) {
-                this.header.classList.add('active-header');
+                _this.header.classList.add('active-header');
             }
             else {
-                this.header.classList.remove('active-header');
+                _this.header.classList.remove('active-header');
             }
         });
-    }
-    ActiveOpions() {
-        this.options_header.forEach(e => {
-            let ele = e;
-            ele.addEventListener('click', _ => {
+    };
+    Activtiy.prototype.ActiveOpions = function () {
+        var _this = this;
+        this.options_header.forEach(function (e) {
+            var ele = e;
+            ele.addEventListener('click', function (_) {
                 if (window.innerWidth < 766) {
-                    this.options.forEach(s => {
-                        let ele = s;
-                        let span_content = ele.children[0].children[0];
+                    _this.options.forEach(function (s) {
+                        var ele = s;
+                        var span_content = ele.children[0].children[0];
                         ele.children[1].classList.toggle('slideOption');
                         span_content.innerHTML == "+" ? span_content.innerHTML = "-" : span_content.innerHTML = "+";
                     });
                 }
             });
         });
-    }
-}
+    };
+    return Activtiy;
+}());
 //============= Activity || Class================>
-const activtiy = new Activtiy();
+var activtiy = new Activtiy();
 activtiy.ActiveHeaderEle();
 activtiy.ActiveHeaderScroll();
 activtiy.ActiveOpions();
 //============= Activity || Class================>
-class Animations {
-    Animater(img, sec) {
+var Animations = /** @class */ (function () {
+    function Animations() {
+    }
+    Animations.prototype.Animater = function (img, sec) {
         sec.style.display = "none";
-        let srcs = [
+        var srcs = [
             './images/load/1.svg',
             './images/load/2.svg',
             './images/load/3.svg',
             './images/load/4.svg'
         ];
-        let start = 1;
-        window.addEventListener('click', _ => {
-            setInterval(() => {
+        var start = 1;
+        window.addEventListener('click', function (_) {
+            setInterval(function () {
                 if (start < srcs.length) {
                     img.setAttribute('src', srcs[start]);
                     start++;
@@ -72,22 +77,23 @@ class Animations {
                 }
             }, 1000);
         });
-    }
-}
+    };
+    return Animations;
+}());
 //============= Animation || Class================>
-const animation = new Animations();
+var animation = new Animations();
 animation.Animater(document.querySelector('#slider_img'), document.querySelector('#animate'));
 //============= Animation || Class================>
-class ScrollControlls {
-    constructor() {
+var ScrollControlls = /** @class */ (function () {
+    function ScrollControlls() {
         this.left = document.querySelectorAll('.left');
         this.right = document.querySelectorAll('.right');
     }
-    Scroller(dir, dis) {
-        dir.forEach((e) => {
-            e.addEventListener('click', _ => {
+    ScrollControlls.prototype.Scroller = function (dir, dis) {
+        dir.forEach(function (e) {
+            e.addEventListener('click', function (_) {
                 var _a;
-                let ele = (_a = e.parentElement) === null || _a === void 0 ? void 0 : _a.children[1];
+                var ele = (_a = e.parentElement) === null || _a === void 0 ? void 0 : _a.children[1];
                 if (dis == "increase") {
                     ele.scrollLeft -= ele.children[0].scrollWidth + 30;
                 }
@@ -96,28 +102,31 @@ class ScrollControlls {
                 }
             });
         });
-    }
-    IncreaseScroll() {
+    };
+    ScrollControlls.prototype.IncreaseScroll = function () {
         this.Scroller(this.left, "increase");
-    }
-    DisIncreaseScroll() {
+    };
+    ScrollControlls.prototype.DisIncreaseScroll = function () {
         this.Scroller(this.right, "discrease");
-    }
-}
+    };
+    return ScrollControlls;
+}());
 //============= ScrollControlls || Class================>
-const scroll_controlls = new ScrollControlls();
+var scroll_controlls = new ScrollControlls();
 scroll_controlls.IncreaseScroll();
 scroll_controlls.DisIncreaseScroll();
 //============= ScrollControlls || Class================>
-class Filter {
-    HiddeFilter(elements, products, text) {
-        let ele = document.querySelectorAll(`${elements} .options ul li a`);
-        let pro = document.querySelectorAll(`${products}`);
-        let text_hidden_ele = document.querySelector(`${text} .text_hidden_ele`);
-        ele.forEach((e) => {
-            e.addEventListener('click', () => {
-                let lengther = 0;
-                pro.forEach((s) => {
+var Filter = /** @class */ (function () {
+    function Filter() {
+    }
+    Filter.prototype.HiddeFilter = function (elements, products, text) {
+        var ele = document.querySelectorAll(elements + " .options ul li a");
+        var pro = document.querySelectorAll("" + products);
+        var text_hidden_ele = document.querySelector(text + " .text_hidden_ele");
+        ele.forEach(function (e) {
+            e.addEventListener('click', function () {
+                var lengther = 0;
+                pro.forEach(function (s) {
                     if (s.getAttribute("id") == e.getAttribute("id") || e.getAttribute("id") == 'all') {
                         s.style.display = "block";
                         s.removeAttribute('hidden');
@@ -127,7 +136,7 @@ class Filter {
                         s.setAttribute('hidden', 'hide');
                     }
                 });
-                document.querySelectorAll(`${products}`).forEach(e => {
+                document.querySelectorAll("" + products).forEach(function (e) {
                     if (e.getAttribute('hidden')) {
                         lengther += 1;
                     }
@@ -153,59 +162,57 @@ class Filter {
                 }
             });
         });
-    }
-}
+    };
+    return Filter;
+}());
 //============= ScrollControlls || Class================>
-const filter = new Filter();
+var filter = new Filter();
 filter.HiddeFilter('#product_2', ".card", ".cards");
 filter.HiddeFilter('#product_1', ".product-cont", ".products-cont");
 //============= ScrollControlls || Class================>
-class Sign {
-    constructor() {
+var Sign = /** @class */ (function () {
+    function Sign() {
         this.btns = document.querySelectorAll('#sign .content .btn button');
         this.forms = document.querySelectorAll('#sign .content form');
         this.close = document.querySelector('#sign .content .close');
-        this.sign = document.querySelector('#sign');
-        this.user = document.querySelector('.user');
     }
-    ShowHidden() {
-        this.btns.forEach((e) => {
-            e.addEventListener('click', (e) => {
+    Sign.prototype.ShowHidden = function () {
+        var _this = this;
+        this.btns.forEach(function (e) {
+            e.addEventListener('click', function (e) {
                 if (e.target.innerHTML == "Sign in") {
-                    this.forms.forEach((s) => {
+                    _this.forms.forEach(function (s) {
                         s.classList.remove('active_from');
                     });
-                    this.forms[1].classList.add('active_from');
+                    _this.forms[1].classList.add('active_from');
                 }
                 else {
-                    this.forms.forEach((s) => {
+                    _this.forms.forEach(function (s) {
                         s.classList.remove('active_from');
                     });
-                    this.forms[0].classList.add('active_from');
+                    _this.forms[0].classList.add('active_from');
                 }
                 if (e.target.classList.contains('active-btn-form')) {
-                    this.btns.forEach((e) => {
+                    _this.btns.forEach(function (e) {
                         e.classList.add('active-btn-form');
                     });
                     e.target.classList.remove('active-btn-form');
                 }
                 else {
-                    this.btns.forEach((e) => {
+                    _this.btns.forEach(function (e) {
                         e.classList.remove('active-btn-form');
                     });
                     e.target.classList.add('active-btn-form');
                 }
             });
         });
-        this.user.addEventListener('click', () => {
-            this.sign.classList.add('active_sign');
+        this.close.addEventListener('click', function () {
+            console.log('hdi');
         });
-        this.close.addEventListener('click', () => {
-            this.sign.classList.remove('active_sign');
-        });
-    }
-}
+    };
+    return Sign;
+}());
 //============= Sign || Class================>
-const sign = new Sign();
+var sign = new Sign();
 sign.ShowHidden();
 //============= Sign || Class================>

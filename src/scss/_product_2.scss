@@ -7,8 +7,8 @@
     .cards {
       display: grid;
       padding: 20px;
-      grid-template-columns: repeat(12, 200px);
-      overflow: hidden;
+      grid-template-columns: repeat(5, 200px);
+      overflow: auto;
       margin: 0 30px;
       gap: 10px;
     }

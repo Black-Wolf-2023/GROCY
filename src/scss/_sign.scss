@@ -1,0 +1,101 @@
+@use "./main" as *;
+
+#sign {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 100%;
+  transition: all 0.5s ease-in-out;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba($color: $darkColor, $alpha: 0.5);
+  display: flex;
+  justify-content: flex-end;
+  .content {
+    background-color: $whiteColor;
+    width: 300px;
+    position: relative;
+    @include flex(column, center, center, fls, 0px);
+    align-items: center;
+    padding: 20px;
+    .btn {
+      button {
+        padding: 10px 20px;
+        border: 1px solid $mainColor;
+        color: $mainColor;
+        background-color: transparent;
+        transition: all 0.5s ease-in-out;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          background-color: $mainColor;
+          color: $whiteColor;
+        }
+      }
+      .active-btn-form {
+        background-color: $mainColor;
+        color: $whiteColor;
+        &:hover {
+          background-color: $whiteColor;
+          color: $mainColor;
+        }
+      }
+    }
+    form {
+      @include flex(column, flex-start, center, fls, 0px);
+      border: 1px solid $mainColor;
+      transition: all 0.5s ease-in-out;
+      gap: 10px;
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      display: none;
+      > input {
+        border: 1px solid $mainColor;
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+      }
+      #submit {
+        background-color: $primaryColor;
+        color: $mainColor;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: $mainColor;
+          color: $whiteColor;
+        }
+      }
+      .rem,
+      a {
+        @include flex(row, space-between, center, fls, 0px);
+        width: 100%;
+        font-weight: bold;
+        font-size: $mainFont/2;
+        color: $mainColor;
+        cursor: pointer;
+      }
+      a {
+        justify-content: center;
+      }
+    }
+    .active_from {
+      display: flex;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: $mainFont * 1.2;
+      font-weight: bolder;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.active_sign {
+  right: 0 !important;
+}

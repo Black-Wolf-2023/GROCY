@@ -53,6 +53,10 @@ $listColor: (
     @media screen and (min-width: 300px) and (max-width: 766px) {
       @content;
     }
+  } @else if $size == lg {
+    @media screen and (min-width: 766px) and (max-width: 1400px) {
+      @content;
+    }
   } @else {
     @media screen and (min-width: 300px) and (max-width: 1067px) {
       @content;
@@ -74,6 +78,25 @@ $listColor: (
   border: 0;
   font-family: $fontFam;
   -webkit-user-drag: none;
+  scroll-behavior: smooth;
+}
+* {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $darkMianColor;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $darkColor;
+  }
+}
+button,
+img {
+  user-select: none;
+}
+a {
+  cursor: pointer;
 }
 body {
   height: 100vh;
@@ -82,6 +105,26 @@ body {
   left: 0;
   opacity: 1;
   transform: rotate(0);
+}
+.products-cont,
+.cards {
+  &::-webkit-scrollbar {
+    height: 0.4rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 30px;
+  }
+}
+@include media(lg) {
+  .products-cont,
+  .cards {
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
 }
 .box {
   @include flex(column, flex-start, flex-start, fls, 0);
@@ -125,12 +168,14 @@ body {
 @include media(sm) {
   .active-md {
     opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 @include media(md) {
   .active-md {
-    bottom: -85% !important;
+    bottom: -82% !important;
     opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 @each $name, $color in $listColor {
@@ -233,6 +278,26 @@ body {
 
 //=============== Options || End ================>
 
+//=============== Text || Hidden || Start ================>
+
+.text_hidden_ele {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: $darkMianColor;
+  opacity: 0.5;
+  display: none;
+  font-size: $mainFont * 1.2;
+  padding-top: 30px;
+  grid-column: 1/6;
+}
+@include media(sm) {
+  .text_hidden_ele {
+    font-size: $mainFont/1.1;
+  }
+}
+//=============== Text || Hidden || End ================>
+
 //=============== Right || Left || Btn || Start ================>
 .right,
 .left {
@@ -248,6 +313,12 @@ body {
 }
 .right {
   transform: rotate(180deg);
+}
+@include media(sm) {
+  .right,
+  .left {
+    display: none;
+  }
 }
 //=============== Right || Left || Btn || End ================>
 
