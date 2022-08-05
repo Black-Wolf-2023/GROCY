@@ -60,7 +60,7 @@ class Animations {
             './images/load/4.svg'
         ];
         let start = 1;
-        window.addEventListener('click', _ => {
+        window.addEventListener('load', _ => {
             setInterval(() => {
                 if (start < srcs.length) {
                     img.setAttribute('src', srcs[start]);
