@@ -227,7 +227,6 @@ class ShoppingCart {
         });
         this.close.addEventListener('click', () => {
             this.shopping_cart.classList.remove('active_shopping_card');
-            console.log(this.close);
         });
         this.add_1.forEach((e) => {
             e.addEventListener("click", () => {
@@ -257,7 +256,7 @@ class ShoppingCart {
             });
         });
     }
-    Adding_2() {
+    Adding_2(state) {
         this.add_2.forEach((e) => {
             e.addEventListener("click", () => {
                 let data = [
@@ -281,7 +280,7 @@ class ShoppingCart {
                         </div>
                     </div>
                 `);
-                this.total_price += Number(data[3].split('$')[1]);
+                this.total_price += Number(data[3].replace("$", ''));
                 this.total.innerHTML = this.total_price.toString() + "$";
             });
         });
@@ -290,7 +289,7 @@ class ShoppingCart {
 //============= Sign || Class================>
 const shoppingcart = new ShoppingCart();
 shoppingcart.Adding_1();
-shoppingcart.Adding_2();
+shoppingcart.Adding_2(false);
 //============= Sign || Class================>
 function test(e) {
     let num_1 = Number(document.querySelector(".total").innerHTML.split("$")[0]);
@@ -299,8 +298,9 @@ function test(e) {
     let totaly = 0;
     let num = 0;
     totaly = num_1 - num_2;
+    let totaly_handeler = Math.round(totaly * 1000) / 1000;
     e.parentElement.parentElement.remove();
-    document.querySelector(".total").innerHTML = totaly.toString() + "$";
+    document.querySelector(".total").innerHTML = totaly_handeler.toString() + "$";
     num = document.querySelectorAll(".cont .detailes").length;
     num_of_products.innerHTML = num.toString();
 }
