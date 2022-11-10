@@ -63,6 +63,7 @@ activtiy.ActiveOpions();
 //============= Activity || Class================>
 class Animations{
     Animater(img: HTMLElement, sec: HTMLElement) {
+        let body = document.querySelector('body');
         let srcs = [
             './images/load/1.svg',
             './images/load/2.svg',
@@ -76,6 +77,7 @@ class Animations{
                     img.setAttribute('src', srcs[start]);
                     start++;
                 } else {
+                    body?.classList.remove('hide-scroll-body')
                     sec.style.display = "none";
                 }
             },1000)
@@ -304,7 +306,7 @@ class ShoppingCart{
         })
     }
 
-    Adding_2(state) {
+    Adding_2(state:boolean) {
         this.add_2.forEach((e:any) => {
             e.addEventListener("click", () => {
                 let data = [
